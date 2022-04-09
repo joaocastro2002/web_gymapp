@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #FF5050;
+  --secundary: #2C2C2C;
+
+
+  
+
+  /* RGB */
+  --primary-rgb: (255, 80, 80);
+
+
+  /* Hover */
+  --primary-hover: #d84343;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--secundary);
+  border-radius: 30px;
+  border: 0px;
+}
+
+.btn-primary:hover {
+  background-color: #000;
+}
+
+.form-control {
+  border-radius: 30px;
+  border: 1px solid;
+  border-color: var(--secundary);
+}
+
+.form-control:focus {
+  color: #000;
+  background-color: #fff;
+  border-color: var(--secundary);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(75, 75, 75, 0.10);
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #a8a8a8;
+  border-color: #a8a8a8;
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  box-shadow: 0 0 0 0.25rem rgb(75 75 75 / 0.10);
+}
+
+.btn-primary.active, .btn-primary:active {
+  background-color: #000;
+  border-color: #000;
+}
+
+* {
+  font-family: 'Rubik', sans-serif;
+}
