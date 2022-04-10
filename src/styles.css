@@ -31,6 +31,15 @@
   border-color: var(--secundary);
 }
 
+.list-group {
+  border-radius: 27px;
+  box-shadow: 0px 10px 35px 0px rgb(56 71 109 / 8%);
+}
+
+.card{
+  box-shadow: 0px 10px 35px 0px rgb(56 71 109 / 8%);
+  border-radius: 27px;
+}
 .form-control:focus {
   color: #000;
   background-color: #fff;
