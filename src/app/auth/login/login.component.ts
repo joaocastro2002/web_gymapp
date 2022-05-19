@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { TokenStorageService } from '../services/token-storage.service';
+import { PerfilService } from 'src/app/perfil/services/perfil.service';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,7 @@ import { TokenStorageService } from '../services/token-storage.service';
 })
 export class LoginComponent implements OnInit {
 
+  isLoading = false;
   loginForm: FormGroup;
   isLoginFailed = false;
   isLoggedIn = false;
@@ -21,7 +23,8 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private tokenStorage: TokenStorageService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private perfilService: PerfilService
   ) { }
 
 
@@ -37,18 +40,26 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
+    this.isLoading = true;
     this.authService.login(this.loginForm.value).subscribe({
       next: data => {
-        this.tokenStorage.saveToken(data.accessToken);
-        this.tokenStorage.saveUser(data);
-
+        
+        console.log(data);
+        this.tokenStorage.saveToken(data.token);
+        this.perfilService.getPerfil().subscribe(perfilRes => {
+          this.tokenStorage.saveUser(perfilRes);
+        })
+        
+        this.isLoading = false;
         if (data.status == 'Error') {
           this.isLoginFailed = true;
           this.isLoggedIn = false;
           this.errorMessage = data.message
+          this.isLoading = false;
         } else {
           this.isLoginFailed = false;
           this.isLoggedIn = true;
+          this.isLoading = false;
           this.router.navigate(['../dashboard'], {relativeTo: this.route})
         }
 
@@ -56,6 +67,7 @@ export class LoginComponent implements OnInit {
       error: err => {
         this.errorMessage = err.error.message;
         this.isLoginFailed = true;
+        this.isLoading = false;
       }
     });
   }
