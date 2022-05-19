@@ -1,10 +1,30 @@
+.logoGymApp {
+  width: 60%;
+}
+
+.Crossfit {
+  width: 70%;
+}
+
+.desafiosImg {
+  width: 100%;
+}
+
+li.borderless {
+  border-top: 0 none;
+  border-bottom: 0 none;
+  border-left: 0 none;
+  border-right: 0 none;
+}
+
+
 /* You can add global styles to this file, and also import other style files */
 :root {
   --primary: #FF5050;
   --secundary: #2C2C2C;
 
 
-  
+
 
   /* RGB */
   --primary-rgb: (255, 80, 80);
@@ -13,6 +33,7 @@
   /* Hover */
   --primary-hover: #d84343;
 }
+
 
 .btn-primary {
   color: #fff;
@@ -33,13 +54,32 @@
 
 .list-group {
   border-radius: 27px;
-  box-shadow: 0px 10px 35px 0px rgb(56 71 109 / 8%);
+  box-shadow: 0px 10px 35px 0px rgb(56 71 109 / 0%);
 }
 
-.card{
+.card {
   box-shadow: 0px 10px 35px 0px rgb(56 71 109 / 8%);
   border-radius: 27px;
 }
+
+
+.comment:focus {
+  color: #000;
+  background-color: #fff;
+  border-color: var(--secundary);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(75, 75, 75, 0.10);
+}
+
+.comment:disabled {
+  color: rgb(0, 0, 125);
+  background-color: #fff;
+  border-color: rgb(0, 0, 125);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(75, 75, 75, 0.10);
+}
+
+
 .form-control:focus {
   color: #000;
   background-color: #fff;
@@ -48,24 +88,329 @@
   box-shadow: 0 0 0 0.25rem rgba(75, 75, 75, 0.10);
 }
 
-.btn-primary.disabled, .btn-primary:disabled {
+.btn-primary.disabled,
+.btn-primary:disabled {
   color: #fff;
   background-color: #a8a8a8;
   border-color: #a8a8a8;
 }
 
-.btn-check:focus+.btn-primary, .btn-primary:focus {
+.btn-check:focus+.btn-primary,
+.btn-primary:focus {
   color: #fff;
   background-color: #000;
   border-color: #000;
   box-shadow: 0 0 0 0.25rem rgb(75 75 75 / 0.10);
 }
 
-.btn-primary.active, .btn-primary:active {
+.btn-primary.active,
+.btn-primary:active {
   background-color: #000;
   border-color: #000;
 }
 
 * {
   font-family: 'Rubik', sans-serif;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #212529;
+  text-decoration: none;
+  background-color: transparent !important;
+  border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.iconHeight {
+  height: 24px;
+  width: 24px;
+}
+
+.letterSpacing {
+  letter-spacing: 10px;
+}
+
+.calendarIcon {
+  width: 64%;
+}
+
+.colorIcon {
+  color: var(--primary);
+}
+
+@media only screen and (max-width: 992px) {
+  .calendarIcon {
+      width: 46%
+  }
+
+  .borderMuscle {
+      border-left: 0px solid #dee2e6 !important;
+      border-right: 0px solid #dee2e6 !important;
+      border-top: 1px solid rgba(0, 0, 0, .125) !important;
+      border-bottom: 1px solid rgba(0, 0, 0, .125) !important;
+  }
+}
+
+h5,
+h2,
+h6 {
+  color: var(--primary)
+}
+
+.scroll {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.marginIconTop {
+  margin-top: 50%;
+}
+
+.h-200px {
+  height: 260px !important;
+}
+
+.h-150px {
+  height: 190px !important;
+}
+
+.card-scroll {
+  position: relative;
+  overflow: auto;
+}
+
+.textColor {
+  color: var(--primary);
+}
+
+.card-stretch {
+  height: 100%;
+}
+
+
+.borderMuscle {
+  border-left: 1px solid rgba(0, 0, 0, .125);
+  border-right: 1px solid rgba(0, 0, 0, .125);
+  border-top: 0px solid rgba(0, 0, 0, .125);
+  border-bottom: 0px solid rgba(0, 0, 0, .125);
+}
+
+@media (min-width: 992px) {
+
+  main,
+  span,
+  ol,
+  ul,
+  pre,
+  div {
+      scrollbar-width: thin;
+      scrollbar-color: #EFF2F5 transparent;
+  }
+
+  main::-webkit-scrollbar,
+  span::-webkit-scrollbar,
+  ol::-webkit-scrollbar,
+  ul::-webkit-scrollbar,
+  pre::-webkit-scrollbar,
+  div::-webkit-scrollbar {
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 10px;
+  }
+
+  main::-webkit-scrollbar-thumb,
+  span::-webkit-scrollbar-thumb,
+  ol::-webkit-scrollbar-thumb,
+  ul::-webkit-scrollbar-thumb,
+  pre::-webkit-scrollbar-thumb,
+  div::-webkit-scrollbar-thumb {
+      background-color: #EFF2F5;
+      border-radius: 10px;
+  }
+
+  main:hover,
+  span:hover,
+  ol:hover,
+  ul:hover,
+  pre:hover,
+  div:hover {
+      scrollbar-color: #e9edf1 transparent;
+  }
+
+  main:hover::-webkit-scrollbar-thumb,
+  span:hover::-webkit-scrollbar-thumb,
+  ol:hover::-webkit-scrollbar-thumb,
+  ul:hover::-webkit-scrollbar-thumb,
+  pre:hover::-webkit-scrollbar-thumb,
+  div:hover::-webkit-scrollbar-thumb {
+      background-color: #e9edf1;
+  }
+}
+
+.scroll {
+  overflow: scroll;
+  position: relative;
+}
+
+.swordWi {
+  width: 54%;
+}
+
+@media (max-width: 991.98px) {
+  .scroll {
+      overflow: auto;
+  }
+
+  .swordWi {
+      width: 10%;
+  }
+}
+
+
+
+.martopRegisto {
+  margin-top: 7%;
+}
+
+.cardVerPub {
+  height: 113px;
+}
+
+.cardVerPubMar {
+  margin-top: 3%;
+}
+
+.textMiddle {
+  vertical-align: middle;
+}
+
+.modal {}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #272727;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 2rem;
+  outline: 0;
+}
+
+.backGroundImage {
+  background-color: #fff;
+}
+
+.fontComentarios {
+  font-size: 10pt;
+}
+
+.font {
+  font-size: 11pt;
+}
+
+.borderImg {
+  border-radius: 27px;
+}
+
+
+
+.h-375px {
+  height: 375px;
+}
+
+.comentForm {
+  border-radius: 19px;
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+
+.textarea1 {
+  resize: none;
+}
+
+.form-control:focus+.form-label {
+  color: red;
+}
+
+.btn-Red {
+  background-color: var(--primary);
+  border-radius: 53%;
+  height: 38px;
+  color: #fff;
+}
+
+.btn-Red:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-RedDeafio {
+  background-color: var(--primary);
+  width: 65%;
+  margin-left: 7%;
+}
+
+.btn-redDeafio:hover {
+  background-color: var(--primary-hover);
+}
+
+.selectFilter {
+  border-radius: 2rem;
+}
+
+.selectFilter:focus {
+  color: #000;
+  border-color: #000;
+  box-shadow: 0 0 0 0.25rem rgb(75 75 75 / 0.10);
+}
+
+.selectFilter.active,
+.selectFilter:active {
+  border-color: #000;
+}
+
+
+.text-primary {
+  color: var(--primary) !important
+}
+
+.h-465{
+  height: 456px;
+}
+
+.h-210{
+  height:100px;
+}
+
+.marBotInscrever{
+  margin-bottom: 0px;
+}
+
+.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay {
+  background: var(--primary);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  border-color: var(--primary);
+}
+.modal-header {
+  border-bottom: 0px solid #dee2e6;
+}
+
+.modal-footer {
+  border-top: 0px solid #dee2e6;
+}
+
+.btn-save {
+  background-color: var(--primary);
+}
+
+.btn-cancel{
+  background-color: #454545;
 }
