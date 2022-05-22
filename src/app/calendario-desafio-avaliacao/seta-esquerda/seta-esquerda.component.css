@@ -1,0 +1,14 @@
+
+.circle {
+  color: #ff5050;
+  font-size: 30px;
+  top: 40px;
+}
+.setas {
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+

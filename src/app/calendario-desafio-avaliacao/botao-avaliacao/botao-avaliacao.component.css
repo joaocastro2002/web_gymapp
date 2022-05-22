@@ -1,0 +1,33 @@
+
+
+.btn{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.firstbutton {
+  display: flex;
+  justify-content: flex-end;  
+  align-items: flex-end ;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.botao {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 1.2rem;
+  color: white;
+  border-color: #ff5050;
+  background-color: #ff5050;
+}
+
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus-visible,
+.btn-primary:focus,
+.btn-primary.active {
+  background-color: #ff5050;
+  border-color: #ff5050;
+}

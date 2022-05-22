@@ -11,6 +11,7 @@ import { VerAvaliacoesDiasComponent } from './aluno/ver-avaliacoes-dias/ver-aval
 import { VerPublicacaoComponent } from './ver-publicacao/ver-publicacao.component';
 import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisica/criar-avaliacao-fisica.component';
 import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-exercicio.component';
+import { CalendarioDesafioAvaliacaoComponent } from './calendario-desafio-avaliacao/calendario-desafio-avaliacao.component';
 
 //Rotas para paginas
 const routes: Routes = [
@@ -26,7 +27,10 @@ const routes: Routes = [
   { path: 'treinador/verAvaliacaoDias', component: VerAvaliacoesDiasComponent },
   { path: 'treinador/criarAvaliacao', component: CriarAvaliacaoFisicaComponent },
   { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
+  { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
+  { path: 'calendarioDesafioAvaliacao', component: CalendarioDesafioAvaliacaoComponent },
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent }
+
 ];
 
 @NgModule({
