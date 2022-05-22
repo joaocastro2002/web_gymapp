@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik";
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: 10px;
+}
+
 /**********
  * scroll *
 /**********/
@@ -13,13 +24,17 @@
   padding-left: 6px;
 }
 
-
 .card-body {
   padding: 10px;
 }
 
 .card-title {
+  color: #ff5050;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: center;
+  font-weight: bold;
+  letter-spacing: 4px;
 }
 
 .card-mini-desafios-decorrer {

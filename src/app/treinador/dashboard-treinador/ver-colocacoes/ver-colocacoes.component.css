@@ -1,3 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik";
+}
+
+.container {
+  padding: 7px;
+}
+
+.card-body {
+  padding: 5px;
+}
+
+.container-right {
+  padding: 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
 .colocacoes {
   overflow-y: auto;
   margin: 0px;
@@ -41,7 +61,7 @@
 }
 
 .colocacoes .row {
-  width: 103%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

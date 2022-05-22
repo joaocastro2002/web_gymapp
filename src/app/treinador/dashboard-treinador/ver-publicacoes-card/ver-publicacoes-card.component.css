@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik";
+}
+
 .card-ver-publicacoes {
   margin: 0px;
   margin-bottom: 15px;
