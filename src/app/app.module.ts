@@ -36,6 +36,9 @@ import { UtilizadoresLogadosComponent } from './ver-publicacao/utilizadores-loga
 import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisica/criar-avaliacao-fisica.component';
 import { CriarMedidasComponent } from './treinador/criar-avaliacao-fisica/criar-medidas/criar-medidas.component';
 import { IdentificacaoAlunoComponent } from './treinador/criar-avaliacao-fisica/identificacao-aluno/identificacao-aluno.component';
+import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-exercicio.component';
+import { ExerciciosSelecionadosComponent } from './treinador/gestao-exercicio/exercicios-selecionados/exercicios-selecionados.component';
+import { SelecionarExerciciosComponent } from './treinador/gestao-exercicio/selecionar-exercicios/selecionar-exercicios.component';
 
 
 
@@ -76,7 +79,10 @@ import { IdentificacaoAlunoComponent } from './treinador/criar-avaliacao-fisica/
     VerColocacoesComponent,
     CriarAvaliacaoFisicaComponent,
     CriarMedidasComponent,
-    IdentificacaoAlunoComponent
+    IdentificacaoAlunoComponent,
+    GestaoExercicioComponent,
+    ExerciciosSelecionadosComponent,
+    SelecionarExerciciosComponent
 
   ],
   imports: [
