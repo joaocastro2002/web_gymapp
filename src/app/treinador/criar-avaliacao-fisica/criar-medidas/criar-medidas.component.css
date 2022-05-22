@@ -1,0 +1,140 @@
+/* Add a black background color to the top navigation */
+
+/* --red: #FF5050;
+--white: #F2F2F2;
+--black: #2C2C2C; */
+/*mockup notificação inicio*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik";
+}
+
+h1 {
+  letter-spacing: 10px;
+  font-weight: bold;
+}
+
+
+
+.linha {
+  top: 40px;
+}
+
+
+.box {
+  justify-content: center;
+}
+
+.composicao{
+  padding-bottom: 20px;
+}
+
+.right {
+  right:10px;
+  top: 50px;
+  border-radius: 1.2rem;
+  padding: 20px;
+  box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.15), 0 4px 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+.linha-botao {
+  justify-content: flex-end;
+}
+.linha-botao2 {
+  justify-content: flex-end;
+}
+p {
+  font-weight: bolder;
+}
+.botao {
+  justify-content: left;
+  margin-top: 40px;
+  margin-left: 20px;
+  color: white;
+  background-color: #ff5050;
+  border-radius: 1.2rem;
+  border-color: #ff5050;
+  height: 40px;
+  width: 300px;
+}
+.botao2 {
+  justify-content: left;
+  margin-top: 40px;
+  margin-left: 20px;
+  color: white;
+  background-color: #ff5050;
+  border-radius: 1.2rem;
+  border-color: #ff5050;
+  height: 40px;
+  width: 300px;
+}
+.add {
+  position: absolute;
+  font-size: 25px;
+  right: 250px;
+  bottom: 263px;
+}
+
+.identificacao p {
+  color: #ff5050;
+}
+.composicao p {
+  color: #ff5050;
+}
+
+
+.text-medidas p {
+  color: #ff5050;
+  display: flex;
+  justify-content: flex-start;
+}
+.text-esquerdo p {
+  color: grey;
+  display: flex;
+  justify-content: center;
+  padding-left: 250px;
+}
+.text-direito p {
+  color: grey;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 60px;
+}
+.copy {
+  width: 100%;
+  align-items: flex-start;
+}
+.copy p {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  color: grey;
+}
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus-visible,
+.btn-primary:focus,
+.btn-primary.active {
+  background-color: #ff5050;
+  border-color: #ff5050;
+}
+.first {
+  padding-top: 10px;
+  justify-content: flex-start;
+  width: 100%;
+  display: flex;
+ 
+ 
+}
+.first2 {
+  padding-top: 10px;
+ 
+  width: 100%;
+  display: flex;
+}
+.first2 p{
+  padding-left: 10px;
+}
+
