@@ -1,0 +1,89 @@
+.container-right {
+  padding: 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+/**********************
+ * Agendamentos Table *
+/**********************/
+.card {
+  padding: 15px;
+}
+
+.agendamentos-container {
+  padding: 0px;
+}
+
+.agendamentos-card {
+  overflow: auto;
+  padding: 0px;
+  height: 300px;
+}
+.agendamentos-card thead th {
+  position: sticky;
+
+  top: 0;
+  z-index: 1;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  text-align: center;
+}
+
+th {
+  background: #eee;
+}
+
+tr {
+  padding: 0px;
+
+  margin: 0px;
+  line-height: 30px;
+}
+
+.agendamentos > :not(:first-child) {
+  border-top-style: hidden;
+}
+
+.agendamentos tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.agendamentos .agendamento.done {
+  background-color: black;
+  color: white;
+}
+
+.agendamentos .agendamento.avaliacao {
+  background-color: #ff5050;
+  color: white;
+}
+
+.agendamentos .agendamento.desafio {
+  background-color: white;
+  color: black;
+}
+
+.agendamentos p {
+  margin: 0px;
+}
+
+.agendamentos h6 {
+  margin: 0px;
+}
+
+.agendamentos .agendamento.done h6 {
+  color: white;
+}
+.agendamentos .agendamento.avaliacao h6 {
+  color: white;
+}
+.agendamentos .agendamento.desafio h6 {
+  color: black;
+}

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Planos de treino</h5>
+        <div class="scroll-horizontal row flex-nowrap" id="planosTreino">
+
+          <div class="col-sm-4" *ngFor="let plano of planosTreino">
+            <div class="card card-mini-plano-treino">
+              <div class="card-body">
+                <h6 class="one-line-text plano-nome-aluno">
+                  {{plano.nomeAluno}}
+                </h6>
+                <p class="modalidade">{{plano.modalidade}}</p>
+                <p class="light-text">
+                  {{plano.descricao}}
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

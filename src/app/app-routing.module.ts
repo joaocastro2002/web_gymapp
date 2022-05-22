@@ -6,6 +6,7 @@ import { PerfilOutrosComponent } from './perfil/perfil-outros/perfil-outros.comp
 import { PerfilComponent } from './perfil/perfil.component';
 import { CompararAvaliacaoFisicaComponent } from './treinador/comparar-avaliacao-fisica/comparar-avaliacao-fisica.component';
 import { VerAvaliacaoFisicaComponent } from './treinador/ver-avaliacao-fisica/ver-avaliacao-fisica.component';
+import { DashboardTreinadorComponent } from './treinador/dashboard-treinador/dashboard-treinador.component';
 
 //Rotas para paginas
 
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'perfil/:id', component: PerfilOutrosComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'treinador/verAvaliacao', component: VerAvaliacaoFisicaComponent },
-  { path: 'treinador/compararAvaliacao', component: CompararAvaliacaoFisicaComponent }
+  { path: 'treinador/compararAvaliacao', component: CompararAvaliacaoFisicaComponent },
+  { path: 'dashboardTreinador', component: DashboardTreinadorComponent }
 ];
 
 

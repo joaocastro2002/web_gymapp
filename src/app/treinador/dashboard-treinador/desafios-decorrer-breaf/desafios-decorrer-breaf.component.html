@@ -1,0 +1,27 @@
+<div class="container-right">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Desafios a decorrer</h5>
+      <div class="scroll-horizontal row flex-nowrap" id="desafios">
+
+        <div class="col-sm-6" *ngFor="let desafio of desafios">
+          <div class="card card-mini-desafios-decorrer">
+            <div class="card-body">
+              <div class="row content">
+                <div class="col-auto">
+                  <i class="bi bi-trophy"></i>
+                </div>
+                <div class="col-sm-8 info">
+                  <h6 class="one-line-text">{{desafio.nome}}</h6>
+                  <p class="modalidade">{{desafio.modalidade}}</p>
+                  <p class="light-text">{{desafio.data}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

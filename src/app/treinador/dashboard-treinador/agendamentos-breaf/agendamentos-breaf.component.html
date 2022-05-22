@@ -1,0 +1,38 @@
+<div class="container-right">
+  <div class="card">
+    <div class="card-body agendamentos-card">
+      <div class="agendamentos-container">
+        <table class="agendamentos">
+          <thead>
+            <tr>
+              <th class="hour-td"></th>
+              <th>Segunda</th>
+              <th>Terça</th>
+              <th>Quarta</th>
+              <th>Quinta</th>
+              <th>Sexta</th>
+              <th>Sábado</th>
+              <th>Domingo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let hour of agendamentos | keyvalue">
+              <td class="hour-td">{{hour.key}}</td>
+              <td *ngFor="let weekDay of hour.value">
+                <div *ngFor="let agendamento of weekDay">
+                  <div [ngClass]="{'agendamento':true,
+                    'done':agendamento.type==0,
+                    'desafio':agendamento.type==1,
+                    'avaliacao':agendamento.type==2}">
+                    <h6>{{agendamento.nome}}</h6>
+                    <p>{{agendamento.hour}}</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

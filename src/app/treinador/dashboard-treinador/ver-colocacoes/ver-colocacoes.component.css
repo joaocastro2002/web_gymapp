@@ -1,0 +1,48 @@
+.colocacoes {
+  overflow-y: auto;
+  margin: 0px;
+  margin-top: 5px;
+  height: 240px;
+}
+
+.colocacoes .col {
+  padding: 0px;
+  margin: 0px;
+}
+
+.colocacoes p {
+  font-size: 27px;
+  margin: 0px;
+  text-align: start;
+}
+
+.colocacoes i {
+  font-size: 35px;
+}
+
+.colocacoes img {
+  width: 35px;
+  height: 35px;
+}
+
+.colocacoes .placement {
+  color: #ff5050;
+  font-weight: bold;
+  text-align: center;
+  width: 42px;
+}
+
+.colocacoes .hashtag {
+  color: #989191;
+}
+
+.colocacoes .col-auto {
+  padding: 0px;
+}
+
+.colocacoes .row {
+  width: 103%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
