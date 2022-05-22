@@ -1,0 +1,16 @@
+.card-ver-publicacoes {
+  margin: 0px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card-ver-publicacoes i {
+  font-size: 55px;
+  color: #ff5050;
+}
+
+.card-ver-publicacoes .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

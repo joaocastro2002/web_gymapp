@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Agendamento de Desafios</h5>
+        <div class="scroll-horizontal row flex-nowrap" id="agendamentoDesafios">
+
+          <div class="col-sm-4 agendamento-desafio" *ngFor="let agendamento of agendamentosDesafios">
+            <div class="card card-mini">
+              <div class="card-body">
+                <div class="row content">
+                  <div class="col-auto">
+                    <i class="bi bi-trophy"></i>
+                  </div>
+                  <div class="col-auto info">
+                    <h6 class="one-line-text">{{agendamento.nome}}</h6>
+                    <p class="modalidade">{{agendamento.modalidade}}</p>
+                    <p class="light-text">{{agendamento.data}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+h1 {
+  font-weight: normal;
+  letter-spacing: 10px;
+}
+
+.one-line-text {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.container {
+  padding: 7px;
+}
+
+/**********
+ * scroll *
+/**********/
+.scroll-horizontal {
+  overflow-x: auto;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.scroll-horizontal .col-sm-4 {
+  padding-left: 0px;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+/*************
+ * scrollbar *
+/*************/
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 1.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.light-text {
+  color: #4d4d4d;
+}
+
+.modalidade {
+  color: #ff5050;
+}
+
+.text-center-vertical {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-mini-plano-treino {
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.card-mini-plano-treino h6 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0px;
+  padding-bottom: 0px;
+  color: black;
+}
+
+.card-mini-plano-treino p {
+  font-size: 17px;
+  margin: 0px;
+}

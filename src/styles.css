@@ -1,3 +1,5 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
 .logoGymApp {
   width: 60%;
 }
@@ -17,23 +19,17 @@ li.borderless {
   border-right: 0 none;
 }
 
-
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --primary: #FF5050;
-  --secundary: #2C2C2C;
-
-
-
+  --primary: #ff5050;
+  --secundary: #2c2c2c;
 
   /* RGB */
   --primary-rgb: (255, 80, 80);
 
-
   /* Hover */
   --primary-hover: #d84343;
 }
-
 
 .btn-primary {
   color: #fff;
@@ -62,13 +58,12 @@ li.borderless {
   border-radius: 27px;
 }
 
-
 .comment:focus {
   color: #000;
   background-color: #fff;
   border-color: var(--secundary);
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(75, 75, 75, 0.10);
+  box-shadow: 0 0 0 0.25rem rgba(75, 75, 75, 0.1);
 }
 
 .comment:disabled {
@@ -76,16 +71,15 @@ li.borderless {
   background-color: #fff;
   border-color: rgb(0, 0, 125);
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(75, 75, 75, 0.10);
+  box-shadow: 0 0 0 0.25rem rgba(75, 75, 75, 0.1);
 }
-
 
 .form-control:focus {
   color: #000;
   background-color: #fff;
   border-color: var(--secundary);
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(75, 75, 75, 0.10);
+  box-shadow: 0 0 0 0.25rem rgba(75, 75, 75, 0.1);
 }
 
 .btn-primary.disabled,
@@ -95,12 +89,12 @@ li.borderless {
   border-color: #a8a8a8;
 }
 
-.btn-check:focus+.btn-primary,
+.btn-check:focus + .btn-primary,
 .btn-primary:focus {
   color: #fff;
   background-color: #000;
   border-color: #000;
-  box-shadow: 0 0 0 0.25rem rgb(75 75 75 / 0.10);
+  box-shadow: 0 0 0 0.25rem rgb(75 75 75 / 0.1);
 }
 
 .btn-primary.active,
@@ -110,7 +104,7 @@ li.borderless {
 }
 
 * {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .list-group-item {
@@ -120,7 +114,7 @@ li.borderless {
   color: #212529;
   text-decoration: none;
   background-color: transparent !important;
-  border: 1px solid rgba(0, 0, 0, .125);
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .iconHeight {
@@ -142,21 +136,21 @@ li.borderless {
 
 @media only screen and (max-width: 992px) {
   .calendarIcon {
-      width: 46%
+    width: 46%;
   }
 
   .borderMuscle {
-      border-left: 0px solid #dee2e6 !important;
-      border-right: 0px solid #dee2e6 !important;
-      border-top: 1px solid rgba(0, 0, 0, .125) !important;
-      border-bottom: 1px solid rgba(0, 0, 0, .125) !important;
+    border-left: 0px solid #dee2e6 !important;
+    border-right: 0px solid #dee2e6 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
   }
 }
 
 h5,
 h2,
 h6 {
-  color: var(--primary)
+  color: var(--primary);
 }
 
 .scroll {
@@ -189,24 +183,22 @@ h6 {
   height: 100%;
 }
 
-
 .borderMuscle {
-  border-left: 1px solid rgba(0, 0, 0, .125);
-  border-right: 1px solid rgba(0, 0, 0, .125);
-  border-top: 0px solid rgba(0, 0, 0, .125);
-  border-bottom: 0px solid rgba(0, 0, 0, .125);
+  border-left: 1px solid rgba(0, 0, 0, 0.125);
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+  border-top: 0px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 0px solid rgba(0, 0, 0, 0.125);
 }
 
 @media (min-width: 992px) {
-
   main,
   span,
   ol,
   ul,
   pre,
   div {
-      scrollbar-width: thin;
-      scrollbar-color: #EFF2F5 transparent;
+    scrollbar-width: thin;
+    scrollbar-color: #eff2f5 transparent;
   }
 
   main::-webkit-scrollbar,
@@ -215,9 +207,9 @@ h6 {
   ul::-webkit-scrollbar,
   pre::-webkit-scrollbar,
   div::-webkit-scrollbar {
-      width: 0.4rem;
-      height: 0.4rem;
-      border-radius: 10px;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 10px;
   }
 
   main::-webkit-scrollbar-thumb,
@@ -226,8 +218,8 @@ h6 {
   ul::-webkit-scrollbar-thumb,
   pre::-webkit-scrollbar-thumb,
   div::-webkit-scrollbar-thumb {
-      background-color: #EFF2F5;
-      border-radius: 10px;
+    background-color: #eff2f5;
+    border-radius: 10px;
   }
 
   main:hover,
@@ -236,7 +228,7 @@ h6 {
   ul:hover,
   pre:hover,
   div:hover {
-      scrollbar-color: #e9edf1 transparent;
+    scrollbar-color: #e9edf1 transparent;
   }
 
   main:hover::-webkit-scrollbar-thumb,
@@ -245,7 +237,7 @@ h6 {
   ul:hover::-webkit-scrollbar-thumb,
   pre:hover::-webkit-scrollbar-thumb,
   div:hover::-webkit-scrollbar-thumb {
-      background-color: #e9edf1;
+    background-color: #e9edf1;
   }
 }
 
@@ -260,15 +252,13 @@ h6 {
 
 @media (max-width: 991.98px) {
   .scroll {
-      overflow: auto;
+    overflow: auto;
   }
 
   .swordWi {
-      width: 10%;
+    width: 10%;
   }
 }
-
-
 
 .martopRegisto {
   margin-top: 7%;
@@ -286,7 +276,8 @@ h6 {
   vertical-align: middle;
 }
 
-.modal {}
+.modal {
+}
 
 .modal-content {
   position: relative;
@@ -296,7 +287,7 @@ h6 {
   pointer-events: auto;
   background-color: #272727;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, .2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 2rem;
   outline: 0;
 }
@@ -317,8 +308,6 @@ h6 {
   border-radius: 27px;
 }
 
-
-
 .h-375px {
   height: 375px;
 }
@@ -330,12 +319,11 @@ h6 {
   border-color: #fff;
 }
 
-
 .textarea1 {
   resize: none;
 }
 
-.form-control:focus+.form-label {
+.form-control:focus + .form-label {
   color: red;
 }
 
@@ -367,7 +355,7 @@ h6 {
 .selectFilter:focus {
   color: #000;
   border-color: #000;
-  box-shadow: 0 0 0 0.25rem rgb(75 75 75 / 0.10);
+  box-shadow: 0 0 0 0.25rem rgb(75 75 75 / 0.1);
 }
 
 .selectFilter.active,
@@ -375,24 +363,40 @@ h6 {
   border-color: #000;
 }
 
-
 .text-primary {
-  color: var(--primary) !important
+  color: var(--primary) !important;
 }
 
-.h-465{
+.h-465 {
   height: 456px;
 }
 
-.h-210{
-  height:100px;
+.h-210 {
+  height: 100px;
 }
 
-.marBotInscrever{
+.marBotInscrever {
   margin-bottom: 0px;
 }
 
-.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay {
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay {
   background: var(--primary);
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -411,6 +415,6 @@ h6 {
   background-color: var(--primary);
 }
 
-.btn-cancel{
+.btn-cancel {
   background-color: #454545;
 }

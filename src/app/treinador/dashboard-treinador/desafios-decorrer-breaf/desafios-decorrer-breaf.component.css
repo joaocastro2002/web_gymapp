@@ -1,0 +1,75 @@
+/**********
+ * scroll *
+/**********/
+.scroll-horizontal {
+  overflow-x: auto;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.scroll-horizontal .col-sm-4 {
+  padding-left: 0px;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-mini-desafios-decorrer {
+  margin: 0px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.card-mini-desafios-decorrer i {
+  font-size: 40px;
+}
+
+.card-mini-desafios-decorrer h6 {
+  font-size: 16px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  color: black;
+}
+
+.card-mini-desafios-decorrer .content {
+  padding-left: 0px;
+  margin: 5px 5px 0px 5px;
+  text-align: left;
+}
+
+.card-mini-desafios-decorrer p {
+  font-size: 13px;
+  line-height: 15px;
+
+  margin-bottom: 0px;
+}
+
+.card-mini-desafios-decorrer .info {
+  text-align: center;
+  padding-left: 0px;
+}
+.card-mini-desafios-decorrer .col-sm-8 {
+  padding: 0px;
+}
+
+.card-mini-desafios-decorrer .exercicio {
+  text-align: left;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.card-mini-desafios-decorrer .light-text {
+  color: #4d4d4d;
+}
+
+.card-mini-desafios-decorrer .modalidade {
+  color: #ff5050;
+}

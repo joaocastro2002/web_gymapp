@@ -1,0 +1,26 @@
+<div class="container-right">
+  <div class="card">
+    <div class="card-body">
+      <div class="colocacoes flex-nowrap" id="top10">
+        <div *ngFor="let colocacao of colocacoes; let i = index">
+          <div class="row">
+            <div class="col-auto">
+              <p class="placement">{{[i+1]}}º</p>
+            </div>
+            <div class="col-auto">
+              <img src="./images/user.png" />
+            </div>
+
+            <div class="col-auto">
+              <p class="hashtag">{{colocacao.hashtag}}</p>
+            </div>
+            <div class="col-auto">
+              <p class="pontos">{{colocacao.pontuacao}}</p>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
