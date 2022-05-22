@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedidasCompararAvaliacaoComponent implements OnInit {
 
+  medidas = []
+
   constructor() { }
 
   ngOnInit(): void {
+    this.medidas = [{nome: 'Braço', valor: '30cm'},
+    {nome: 'Braço', valor: '30cm'},
+    {nome: 'Braço', valor: '30cm'},
+    {nome: 'Braço', valor: '30cm'},
+    {nome: 'Braço', valor: '30cm'},
+    {nome: 'Braço', valor: '30cm'},
+    {nome: 'Braço', valor: '30cm'},
+    {nome: 'Braço', valor: '30cm'}]
   }
-
 }

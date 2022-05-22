@@ -1,0 +1,16 @@
+<div class="card cartao">
+    <div class="card-body">
+      <div class="container">
+        <h5 class="title medidas">Medidas</h5>
+        <div class="container con1">
+          <div class="scroll col flex-nowrap">
+            <div *ngFor="let medida of medidas">
+              <hr />
+              <h6 class="title">{{medida.nome}}</h6>
+              <p>{{medida.valor}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
