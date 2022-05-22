@@ -1,0 +1,42 @@
+.cartao .container{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding: 0px;
+    height: 650px;
+}
+
+.cartao .container h5{
+    text-align: center;
+    font-size: 23px;
+    color:#FF5050;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-family: 'Rubik';
+}
+
+.scroll{
+    width: 200px;
+    height: 450px;
+    overflow-y: auto; 
+}
+
+.cartao .container h6{
+    text-align: center;
+    font-size: 23px;
+    font-family: 'Rubik';
+    margin-bottom: 4px;
+    font-weight: bold;
+    color: black;
+}
+
+.cartao .container p{
+    text-align: center;
+    font-size: 16px;
+    color: #4D4D4D;
+    margin-bottom: 0px;
+}
+
