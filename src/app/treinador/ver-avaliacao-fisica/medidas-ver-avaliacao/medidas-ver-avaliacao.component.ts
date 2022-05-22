@@ -15,7 +15,10 @@ export class MedidasVerAvaliacaoComponent implements OnInit {
     this.medidas = [{nome: 'Braço', valor: '30cm'},
     {nome: 'Braço', valor: '30cm'},
     {nome: 'Braço', valor: '30cm'},
+    {nome: 'Braço', valor: '30cm'},
+    {nome: 'Braço', valor: '30cm'},
+    {nome: 'Braço', valor: '30cm'},
+    {nome: 'Braço', valor: '30cm'},
     {nome: 'Braço', valor: '30cm'}]
   }
-
 }

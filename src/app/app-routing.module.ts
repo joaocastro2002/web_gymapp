@@ -4,17 +4,15 @@ import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PerfilOutrosComponent } from './perfil/perfil-outros/perfil-outros.component';
 import { PerfilComponent } from './perfil/perfil.component';
-import { CompararAvaliacaoFisicaComponent } from './treinador/comparar-avaliacao-fisica/comparar-avaliacao-fisica.component';
+import { CompararAvaliacaoFisicaComponent } from './aluno/comparar-avaliacao-fisica/comparar-avaliacao-fisica.component';
 import { VerAvaliacaoFisicaComponent } from './treinador/ver-avaliacao-fisica/ver-avaliacao-fisica.component';
 import { DashboardTreinadorComponent } from './treinador/dashboard-treinador/dashboard-treinador.component';
+import { VerAvaliacoesDiasComponent } from './aluno/ver-avaliacoes-dias/ver-avaliacoes-dias.component';
 import { VerPublicacaoComponent } from './ver-publicacao/ver-publicacao.component';
 import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisica/criar-avaliacao-fisica.component';
 import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-exercicio.component';
 
-
-
 //Rotas para paginas
-
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'perfil', component: PerfilComponent },
@@ -24,13 +22,12 @@ const routes: Routes = [
   { path: 'verPublicacao', component: VerPublicacaoComponent },
   { path: 'treinador/verAvaliacao', component: VerAvaliacaoFisicaComponent },
   { path: 'treinador/compararAvaliacao', component: CompararAvaliacaoFisicaComponent },
+  { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
+  { path: 'treinador/verAvaliacaoDias', component: VerAvaliacoesDiasComponent },
   { path: 'treinador/criarAvaliacao', component: CriarAvaliacaoFisicaComponent },
   { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
-  { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
-
-
+  { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent }
 ];
-
 
 @NgModule({
   declarations: [],
