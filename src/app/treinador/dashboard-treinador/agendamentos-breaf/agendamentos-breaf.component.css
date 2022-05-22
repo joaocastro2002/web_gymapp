@@ -18,7 +18,7 @@
 .agendamentos-card {
   overflow: auto;
   padding: 0px;
-  height: 300px;
+  height: 260px;
 }
 .agendamentos-card thead th {
   position: sticky;

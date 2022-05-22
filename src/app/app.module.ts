@@ -35,6 +35,21 @@ import { VerAvaliacoesDiasComponent } from './aluno/ver-avaliacoes-dias/ver-aval
 import { AvaliacoesRealizadasComponent } from './aluno/ver-avaliacoes-dias/avaliacoes-realizadas/avaliacoes-realizadas.component';
 import { MedidasAvaliacoesRealizadasComponent } from './aluno/ver-avaliacoes-dias/medidas-avaliacoes-realizadas/medidas-avaliacoes-realizadas.component';
 import { DadosAvaliacoesRealizadasComponent } from './aluno/ver-avaliacoes-dias/dados-avaliacoes-realizadas/dados-avaliacoes-realizadas.component';
+import { VerPublicacaoComponent } from './ver-publicacao/ver-publicacao.component';
+import { NovaPublicacaoComponent } from './ver-publicacao/nova-publicacao/nova-publicacao.component';
+import { PublicacaoComponent } from './ver-publicacao/publicacao/publicacao.component';
+import { UtilizadoresLogadosComponent } from './ver-publicacao/utilizadores-logados/utilizadores-logados.component';
+import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisica/criar-avaliacao-fisica.component';
+import { CriarMedidasComponent } from './treinador/criar-avaliacao-fisica/criar-medidas/criar-medidas.component';
+import { IdentificacaoAlunoComponent } from './treinador/criar-avaliacao-fisica/identificacao-aluno/identificacao-aluno.component';
+import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-exercicio.component';
+import { ExerciciosSelecionadosComponent } from './treinador/gestao-exercicio/exercicios-selecionados/exercicios-selecionados.component';
+import { SelecionarExerciciosComponent } from './treinador/gestao-exercicio/selecionar-exercicios/selecionar-exercicios.component';
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -68,7 +83,19 @@ import { DadosAvaliacoesRealizadasComponent } from './aluno/ver-avaliacoes-dias/
     VerAvaliacoesDiasComponent,
     AvaliacoesRealizadasComponent,
     MedidasAvaliacoesRealizadasComponent,
-    DadosAvaliacoesRealizadasComponent
+    DadosAvaliacoesRealizadasComponent,
+    VerPublicacaoComponent,
+    NovaPublicacaoComponent,
+    PublicacaoComponent,
+    UtilizadoresLogadosComponent,
+    VerColocacoesComponent,
+    CriarAvaliacaoFisicaComponent,
+    CriarMedidasComponent,
+    IdentificacaoAlunoComponent,
+    GestaoExercicioComponent,
+    ExerciciosSelecionadosComponent,
+    SelecionarExerciciosComponent
+
   ],
   imports: [
     BrowserModule,
