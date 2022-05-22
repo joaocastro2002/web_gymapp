@@ -17,3 +17,30 @@
   padding-right: 7px;
   padding-left: 0px;
 }
+
+.container-right {
+  padding: 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+/***********
+ * Buttons *
+/***********/
+.btn {
+  border-radius: 1.5rem;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus-visible,
+.btn-primary:focus,
+.btn-primary.active {
+  background-color: #ff5050;
+  border-color: #ff5050;
+  color: white;
+}
+
+.alunos-button {
+  text-align: right;
+}
