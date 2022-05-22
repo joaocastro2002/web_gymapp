@@ -1,0 +1,20 @@
+.btn-lg{
+    background-color: #FF5050;
+    border-color: #FF5050;
+    border-radius: 30px;
+    font-family: 'Rubik';
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+a{
+    color: #FFFFFF;
+    font-family: 'Rubik';
+    font-weight: bold;
+}
+a:hover{
+    background-color: #FF5050;
+    color: #c2baba;
+}
