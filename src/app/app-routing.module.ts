@@ -10,6 +10,7 @@ import { DashboardTreinadorComponent } from './treinador/dashboard-treinador/das
 import { VerPublicacaoComponent } from './ver-publicacao/ver-publicacao.component';
 import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisica/criar-avaliacao-fisica.component';
 import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-exercicio.component';
+import { CalendarioDesafioAvaliacaoComponent } from './calendario-desafio-avaliacao/calendario-desafio-avaliacao.component';
 
 
 
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'treinador/criarAvaliacao', component: CriarAvaliacaoFisicaComponent },
   { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
+  { path: 'calendarioDesafioAvaliacao', component: CalendarioDesafioAvaliacaoComponent },
 
 
 ];

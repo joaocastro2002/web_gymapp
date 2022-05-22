@@ -39,6 +39,14 @@ import { IdentificacaoAlunoComponent } from './treinador/criar-avaliacao-fisica/
 import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-exercicio.component';
 import { ExerciciosSelecionadosComponent } from './treinador/gestao-exercicio/exercicios-selecionados/exercicios-selecionados.component';
 import { SelecionarExerciciosComponent } from './treinador/gestao-exercicio/selecionar-exercicios/selecionar-exercicios.component';
+import { CalendarioDesafioAvaliacaoComponent } from './calendario-desafio-avaliacao/calendario-desafio-avaliacao.component';
+import { DataComponent } from './calendario-desafio-avaliacao/data/data.component';
+import { BotaoDesafioComponent } from './calendario-desafio-avaliacao/botao-desafio/botao-desafio.component';
+import { BotaoAvaliacaoComponent } from './calendario-desafio-avaliacao/botao-avaliacao/botao-avaliacao.component';
+import { CalendarioComponent } from './calendario-desafio-avaliacao/calendario/calendario.component';
+import { SetaEsquerdaComponent } from './calendario-desafio-avaliacao/seta-esquerda/seta-esquerda.component';
+import { SetaDireitaComponent } from './calendario-desafio-avaliacao/seta-direita/seta-direita.component';
+
 
 
 
@@ -82,7 +90,15 @@ import { SelecionarExerciciosComponent } from './treinador/gestao-exercicio/sele
     IdentificacaoAlunoComponent,
     GestaoExercicioComponent,
     ExerciciosSelecionadosComponent,
-    SelecionarExerciciosComponent
+    SelecionarExerciciosComponent,
+    CalendarioDesafioAvaliacaoComponent,
+    DataComponent,
+    BotaoDesafioComponent,
+    BotaoAvaliacaoComponent,
+    CalendarioComponent,
+    SetaEsquerdaComponent,
+    SetaDireitaComponent,
+
 
   ],
   imports: [
