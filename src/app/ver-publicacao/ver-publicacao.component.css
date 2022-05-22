@@ -1,0 +1,12 @@
+.cards{
+  justify-content: center;
+}
+.cardsmarge{
+  padding-left:50px;
+}
+
+.new{
+  padding-left: 150px;
+  display: flex;
+  justify-content: flex-end;
+}

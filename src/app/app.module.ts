@@ -20,6 +20,12 @@ import { AgendamentosBreafComponent } from './treinador/dashboard-treinador/agen
 import { DesafiosDecorrerBreafComponent } from './treinador/dashboard-treinador/desafios-decorrer-breaf/desafios-decorrer-breaf.component';
 import { VerPublicacoesCardComponent } from './treinador/dashboard-treinador/ver-publicacoes-card/ver-publicacoes-card.component';
 import { VerColocacoesComponent } from './treinador/dashboard-treinador/ver-colocacoes/ver-colocacoes.component';
+import { VerPublicacaoComponent } from './ver-publicacao/ver-publicacao.component';
+import { NovaPublicacaoComponent } from './ver-publicacao/nova-publicacao/nova-publicacao.component';
+import { PublicacaoComponent } from './ver-publicacao/publicacao/publicacao.component';
+import { UtilizadoresLogadosComponent } from './ver-publicacao/utilizadores-logados/utilizadores-logados.component';
+
+
 
 
 
@@ -42,6 +48,11 @@ import { VerColocacoesComponent } from './treinador/dashboard-treinador/ver-colo
     DesafiosDecorrerBreafComponent,
     VerPublicacoesCardComponent,
     VerColocacoesComponent,
+    VerPublicacaoComponent,
+    NovaPublicacaoComponent,
+    PublicacaoComponent,
+    UtilizadoresLogadosComponent,
+
 
   ],
   imports: [
