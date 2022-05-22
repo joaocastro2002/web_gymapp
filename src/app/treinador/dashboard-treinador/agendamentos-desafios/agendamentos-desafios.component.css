@@ -1,0 +1,105 @@
+h1 {
+  font-weight: normal;
+  letter-spacing: 10px;
+}
+
+.one-line-text {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.container {
+  padding: 7px;
+}
+
+/**********
+ * scroll *
+/**********/
+.scroll-horizontal {
+  overflow-x: auto;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.scroll-horizontal .col-sm-4 {
+  padding-left: 0px;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.agendamento-desafio {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-title {
+  color: #ff5050;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+.card-mini {
+  margin: 0px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-mini i {
+  font-size: 43px;
+}
+
+.card-mini h6 {
+  font-size: 19px;
+  color: black;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.card-mini .content {
+  padding-left: 0px;
+  margin: 5px 5px 0px 5px;
+}
+
+.card-mini .row.content {
+  justify-content: space-evenly;
+}
+
+.card-mini p {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.card-mini .info {
+  text-align: left;
+  padding-left: 0px;
+}
+
+.card-mini .exercicio {
+  text-align: left;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.card-mini .light-text {
+  color: #4d4d4d;
+}
+
+.card-mini .modalidade {
+  color: #ff5050;
+}
+
+.text-center-vertical {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

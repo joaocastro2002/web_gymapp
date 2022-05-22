@@ -11,6 +11,18 @@ import { HeaderComponent } from './header/header.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { PerfilOutrosComponent } from './perfil/perfil-outros/perfil-outros.component';
+import { DashboardTreinadorComponent } from './treinador/dashboard-treinador/dashboard-treinador.component';
+import { AgendamentosDesafiosComponent } from './treinador/dashboard-treinador/agendamentos-desafios/agendamentos-desafios.component';
+import { MeusExerciciosComponent } from './treinador/dashboard-treinador/meus-exercicios/meus-exercicios.component';
+import { GraficoComponent } from './treinador/dashboard-treinador/grafico/grafico.component';
+import { PlanosTreinoComponent } from './treinador/dashboard-treinador/planos-treino/planos-treino.component';
+import { AgendamentosBreafComponent } from './treinador/dashboard-treinador/agendamentos-breaf/agendamentos-breaf.component';
+import { DesafiosDecorrerBreafComponent } from './treinador/dashboard-treinador/desafios-decorrer-breaf/desafios-decorrer-breaf.component';
+import { VerPublicacoesCardComponent } from './treinador/dashboard-treinador/ver-publicacoes-card/ver-publicacoes-card.component';
+import { VerColocacoesComponent } from './treinador/dashboard-treinador/ver-colocacoes/ver-colocacoes.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -20,14 +32,24 @@ import { PerfilOutrosComponent } from './perfil/perfil-outros/perfil-outros.comp
     HeaderComponent,
     LoadingSpinnerComponent,
     PerfilComponent,
-    PerfilOutrosComponent
+    PerfilOutrosComponent,
+    DashboardTreinadorComponent,
+    AgendamentosDesafiosComponent,
+    MeusExerciciosComponent,
+    GraficoComponent,
+    PlanosTreinoComponent,
+    AgendamentosBreafComponent,
+    DesafiosDecorrerBreafComponent,
+    VerPublicacoesCardComponent,
+    VerColocacoesComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

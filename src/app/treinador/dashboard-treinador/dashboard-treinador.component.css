@@ -1,0 +1,19 @@
+.main-page {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 90%;
+}
+
+.container {
+  padding: 7px;
+}
+
+.right-col .container {
+  padding-left: 7px;
+}
+
+.left-col .container {
+  padding-right: 7px;
+  padding-left: 0px;
+}
