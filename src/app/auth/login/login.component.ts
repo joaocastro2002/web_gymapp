@@ -43,13 +43,12 @@ export class LoginComponent implements OnInit {
     this.isLoading = true;
     this.authService.login(this.loginForm.value).subscribe({
       next: data => {
-        
-        console.log(data);
+        this.tokenStorage.saveRefreshToken(data.refreshToken)
         this.tokenStorage.saveToken(data.token);
         this.perfilService.getPerfil().subscribe(perfilRes => {
           this.tokenStorage.saveUser(perfilRes);
         })
-        
+
         this.isLoading = false;
         if (data.status == 'Error') {
           this.isLoginFailed = true;
@@ -60,7 +59,7 @@ export class LoginComponent implements OnInit {
           this.isLoginFailed = false;
           this.isLoggedIn = true;
           this.isLoading = false;
-          this.router.navigate(['../dashboard'], {relativeTo: this.route})
+          this.router.navigate(['../dashboard'], { relativeTo: this.route })
         }
 
       },

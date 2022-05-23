@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik";
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: 10px;
+}
+
 .container-right {
   padding: 0px;
   padding-top: 7px;
@@ -18,7 +29,7 @@
 .agendamentos-card {
   overflow: auto;
   padding: 0px;
-  height: 260px;
+  height: 320px;
 }
 .agendamentos-card thead th {
   position: sticky;

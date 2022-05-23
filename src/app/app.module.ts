@@ -40,6 +40,8 @@ import { VerPublicacaoComponent } from './ver-publicacao/ver-publicacao.componen
 import { NovaPublicacaoComponent } from './ver-publicacao/nova-publicacao/nova-publicacao.component';
 import { PublicacaoComponent } from './ver-publicacao/publicacao/publicacao.component';
 import { UtilizadoresLogadosComponent } from './ver-publicacao/utilizadores-logados/utilizadores-logados.component';
+import { NotificacoesComponent } from './notificacoes/notificacoes.component';
+import { NotificacoesAplicacaoComponent } from './notificacoes/notificacoes-aplicacao/notificacoes-aplicacao.component';
 import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisica/criar-avaliacao-fisica.component';
 import { CriarMedidasComponent } from './treinador/criar-avaliacao-fisica/criar-medidas/criar-medidas.component';
 import { IdentificacaoAlunoComponent } from './treinador/criar-avaliacao-fisica/identificacao-aluno/identificacao-aluno.component';
@@ -47,7 +49,7 @@ import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-ex
 import { ExerciciosSelecionadosComponent } from './treinador/gestao-exercicio/exercicios-selecionados/exercicios-selecionados.component';
 import { SelecionarExerciciosComponent } from './treinador/gestao-exercicio/selecionar-exercicios/selecionar-exercicios.component';
 import { CalendarioDesafioAvaliacaoComponent } from './calendario-desafio-avaliacao/calendario-desafio-avaliacao.component';
-import { DataComponent } from './calendario-desafio-avaliacao/data/data.component';
+
 import { BotaoDesafioComponent } from './calendario-desafio-avaliacao/botao-desafio/botao-desafio.component';
 import { BotaoAvaliacaoComponent } from './calendario-desafio-avaliacao/botao-avaliacao/botao-avaliacao.component';
 import { CalendarioComponent } from './calendario-desafio-avaliacao/calendario/calendario.component';
@@ -56,6 +58,8 @@ import { SetaDireitaComponent } from './calendario-desafio-avaliacao/seta-direit
 import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.component';
 import { PesquisaComponent } from './treinador/ecra-alunos/pesquisa/pesquisa.component';
 import { CartoesComponent } from './treinador/ecra-alunos/cartoes/cartoes.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 
 
@@ -100,6 +104,8 @@ import { CartoesComponent } from './treinador/ecra-alunos/cartoes/cartoes.compon
     PublicacaoComponent,
     UtilizadoresLogadosComponent,
     VerColocacoesComponent,
+    NotificacoesComponent,
+    NotificacoesAplicacaoComponent,
     CriarAvaliacaoFisicaComponent,
     CriarMedidasComponent,
     IdentificacaoAlunoComponent,
@@ -107,7 +113,6 @@ import { CartoesComponent } from './treinador/ecra-alunos/cartoes/cartoes.compon
     ExerciciosSelecionadosComponent,
     SelecionarExerciciosComponent,
     CalendarioDesafioAvaliacaoComponent,
-    DataComponent,
     BotaoDesafioComponent,
     BotaoAvaliacaoComponent,
     CalendarioComponent,
@@ -116,6 +121,7 @@ import { CartoesComponent } from './treinador/ecra-alunos/cartoes/cartoes.compon
     EcraAlunosComponent,
     PesquisaComponent,
     CartoesComponent,
+    FooterComponent,
 
 
   ],

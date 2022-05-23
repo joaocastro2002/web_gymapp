@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik";
+}
+
 h1 {
   font-weight: normal;
   letter-spacing: 10px;
@@ -31,29 +37,12 @@ h1 {
   padding-left: 6px;
 }
 
-/*************
- * scrollbar *
-/*************/
-::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: none;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 1.5rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 .light-text {
   color: #4d4d4d;
+}
+
+.card-body {
+  padding: 5px;
 }
 
 .modalidade {
@@ -67,7 +56,12 @@ h1 {
 }
 
 .card-title {
+  color: #ff5050;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: center;
+  font-weight: bold;
+  letter-spacing: 4px;
 }
 
 .card-mini-plano-treino {

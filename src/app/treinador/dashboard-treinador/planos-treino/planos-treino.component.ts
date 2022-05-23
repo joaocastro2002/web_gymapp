@@ -30,6 +30,11 @@ export class PlanosTreinoComponent implements OnInit {
         nomeAluno: "Pedro",
         modalidade: "Futebol",
         descricao: "Futebol de campo"
+      },
+      {
+        nomeAluno: "Pedro",
+        modalidade: "Futebol",
+        descricao: "Futebol de campo"
       }
     ]
   }

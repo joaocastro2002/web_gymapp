@@ -1,14 +1,17 @@
 <app-header></app-header>
 
+<div class="mainPage">
+  <div class="row new">
+    <app-nova-publicacao></app-nova-publicacao>
+  </div>
+  <div class="row cards cards">
+    <div class="col-sm-6">
+      <app-publicacao></app-publicacao>
+    </div>
+    <div class="col-sm-2 cardsmarge">
+      <app-utilizadores-logados></app-utilizadores-logados>
+    </div>
+  </div>
+</div>
 
-<div class="row new">
-  <app-nova-publicacao></app-nova-publicacao>
-</div>
-<div class="row cards cards">
-  <div class="col-sm-6">
-    <app-publicacao></app-publicacao>
-  </div>
-  <div class="col-sm-2 cardsmarge">
-    <app-utilizadores-logados></app-utilizadores-logados>
-  </div>
-</div>
+<app-footer></app-footer>
