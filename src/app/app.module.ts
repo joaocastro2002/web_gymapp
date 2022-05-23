@@ -48,7 +48,7 @@ import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-ex
 import { ExerciciosSelecionadosComponent } from './treinador/gestao-exercicio/exercicios-selecionados/exercicios-selecionados.component';
 import { SelecionarExerciciosComponent } from './treinador/gestao-exercicio/selecionar-exercicios/selecionar-exercicios.component';
 import { CalendarioDesafioAvaliacaoComponent } from './calendario-desafio-avaliacao/calendario-desafio-avaliacao.component';
-import { DataComponent } from './calendario-desafio-avaliacao/data/data.component';
+
 import { BotaoDesafioComponent } from './calendario-desafio-avaliacao/botao-desafio/botao-desafio.component';
 import { BotaoAvaliacaoComponent } from './calendario-desafio-avaliacao/botao-avaliacao/botao-avaliacao.component';
 import { CalendarioComponent } from './calendario-desafio-avaliacao/calendario/calendario.component';
@@ -109,7 +109,6 @@ import { FooterComponent } from './footer/footer.component';
     ExerciciosSelecionadosComponent,
     SelecionarExerciciosComponent,
     CalendarioDesafioAvaliacaoComponent,
-    DataComponent,
     BotaoDesafioComponent,
     BotaoAvaliacaoComponent,
     CalendarioComponent,
