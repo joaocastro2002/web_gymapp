@@ -28,8 +28,8 @@ h1 {
 
 .composicao{
   padding-bottom: 20px;
+  padding-top: 30px;
 }
-
 .right {
   right:10px;
   top: 50px;
@@ -101,17 +101,7 @@ p {
   justify-content: flex-start;
   padding-left: 60px;
 }
-.copy {
-  width: 100%;
-  align-items: flex-start;
-}
-.copy p {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: 0px;
-  color: grey;
-}
+
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:focus-visible,
