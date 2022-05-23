@@ -1,0 +1,153 @@
+<div class="card right">
+  <div class="card-body">
+    <form [formGroup]="avaliacaoForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col text-medidas">
+          <p>Medidas</p>
+        </div>
+        <div class="col text-esquerdo">
+          <p>esquerdo</p>
+        </div>
+        <div class="col text-direito">
+          <p>direito</p>
+        </div>
+      </div>
+      <div class="row medidas">
+        <div class="col-sm-4">
+          <div *ngFor="let medida of medidas">
+            <div class="row first" *ngIf="medida.unilado">
+              <div class="col-sm-3 text box">
+                <p>{{medida.nome}}</p>
+              </div>
+              <div class="col-sm-5 box">
+                <div class="card">
+                  <input class="form-control" type="text" name="{{medida.nome}}" id="{{medida.nome}}"
+                    placeholder="cm" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm-8">
+          <div *ngFor="let medida of medidas">
+            <div class="row first" *ngIf="!medida.unilado">
+              <div class="col-sm-3 text box">
+                <p>{{medida.nome}}</p>
+              </div>
+              <div class="col-sm-3 box">
+                <div class="card">
+                  <input class="form-control" type="text" name="{{medida.nome}}esq" id="{{medida.nome}}esq"
+                    placeholder="cm" />
+                </div>
+              </div>
+              <div class="col-sm-3 box">
+                <div class="card">
+                  <input class="form-control" type="text" name="{{medida.nome}}dr" id="{{medida.nome}}dr"
+                    placeholder="cm" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+        <div class="row composicao">
+          <p>Composição corporal</p>
+        </div>
+
+        <div class="row first2">
+          <div class="col-sm-2">
+            <p>Peso(kg)</p>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <input class="form-control" type="text" name="Peso " id="name" placeholder="kg" />
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <p>Musculo</p>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <input class="form-control" type="text" name="Musculo" id="name" placeholder="kg" />
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <p>Água</p>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <input class="form-control" type="text" name="Agua" id="name" placeholder="%" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row first2">
+          <div class="col-sm-2">
+            <p>Proteina</p>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <input class="form-control" type="text" name="Proteina" id="name" placeholder="%" />
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <p>Gordura corporal</p>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <input class="form-control" type="text" name="Gorduracorporal" id="name" placeholder="%" />
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <p>Gordura Visceral</p>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <input class="form-control" type="text" name="Gordura-Visceral" id="name" placeholder="0-30" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row first2">
+          <div class="col-sm-2">
+            <p>Massa Ossea</p>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <input class="form-control" type="text" name="Massa-Ossea" id="name" placeholder="Kg" />
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <p>Metabolsimo Basal</p>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <input class="form-control" type="text" name="Metabolsimo-Basal" id="name" placeholder="Kg" />
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <p>IMC</p>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <input class="form-control" type="text" name="IMC" id="name" placeholder="0-50" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row linha-botao2">
+          <button class="btn btn-primary botao2" type="submit">
+            Guardar Avaliação
+          </button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

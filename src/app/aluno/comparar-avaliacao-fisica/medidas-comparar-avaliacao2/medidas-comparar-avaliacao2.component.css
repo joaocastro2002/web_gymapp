@@ -1,0 +1,66 @@
+/* tamanho do scroll - vai definir o espaço em que os elementos do scroll vão estar */
+.scroll{
+    width: 250px;
+    height: 325px;
+    overflow-y: auto; /* meter o scroll na vertical */
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+.scroll.col-auto{
+    margin-right: 0px;
+}
+
+h5{
+    color: #FF5050;
+    font-family: 'Rubik';
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-align: center;
+}
+
+h6{
+    color: #000000;
+    font-family: 'Rubik';
+    font-size: 22px;
+}
+
+p{
+    color: #4D4D4D;
+    font-family: 'Rubik';
+    font-size: 17px;
+}
+
+.card{
+    height: 10%;
+    width: 100%;
+}
+
+.row-interior{
+    margin-right: 0px;
+}
+
+.col221{
+    padding-right: 0px;
+}
+.col221 h6{
+    margin-top: 8px;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
+.col-auto{
+    padding-left: 30px;
+}
+
+.col222{
+    padding: 0px;
+}
+.col222 p{
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}

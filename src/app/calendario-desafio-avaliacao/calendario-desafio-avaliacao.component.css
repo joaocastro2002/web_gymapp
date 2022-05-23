@@ -1,0 +1,13 @@
+
+.container{
+  justify-content: center;
+}
+.left{
+  justify-content: flex-end;
+}
+.right{
+  justify-content: flex-end;
+}
+.setas{
+  justify-content: flex-end;
+}

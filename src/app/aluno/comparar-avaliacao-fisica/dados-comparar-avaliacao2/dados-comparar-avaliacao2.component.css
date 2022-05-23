@@ -1,0 +1,93 @@
+h5{
+    color: #FF5050;
+    font-family: 'Rubik';
+    font-weight: bold;
+    letter-spacing: 7px;
+    font-size: 25px;
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 70px;
+}
+
+.cartao{
+    border-radius: 1.2rem;
+    box-shadow: 0px 3px 4px 0px rgba(102, 99, 102, 0.59);
+    font-family: 'Rubik';
+    padding: 0px;
+    display: flex;
+}
+
+.cartao .card{
+    border-radius: 0.7rem;
+    box-shadow: 0px 3px 4px 0px rgba(102, 99, 102, 0.59);
+}
+
+.cartao h6{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cartao image{
+    margin-left: 30px;
+}
+
+.cartao p{
+    margin-left: 0px;
+    font-size: 33px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.fora {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.linha-interior {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.linha-interior .col-auto {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.dentro{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.cartao h6 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+.dentro .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.col-sm-3 {
+    padding: 17px;
+}
+
+.cartao p {
+    margin-left: 0px;
+    font-size: 33px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.kcal {
+    padding-left: 32px;
+    padding-right: 0px;
+}
