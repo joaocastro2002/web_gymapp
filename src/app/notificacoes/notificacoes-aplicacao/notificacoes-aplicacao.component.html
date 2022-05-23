@@ -1,0 +1,135 @@
+<div class="row notificacoes">
+  <div class="col-sm-6">
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Notificações da Aplicação</h5>
+          <div class="notificacoes-list col flex-nowrap" id="appNoti">
+
+            <div *ngFor="let noti of notificacoes">
+              <div *ngIf="noti.type >= 0;">
+                <div class="row notif" *ngIf="noti.type == 0 || noti.type == 1; else outrasNoti">
+                  <div class="card notificacao-card">
+                    <div class="card-body">
+                      <div class="col-auto">
+                        <div class="content">
+                          <div class="row noti">
+                            <div class="col-auto">
+                              <div class="container">
+                                <img src="../../../assets/img/person.png" class="image" />
+
+                                <i class="bi bi-check-circle-fill image-icon"></i>
+                              </div>
+                            </div>
+                            <div class="col-auto conteudo">
+                              <p>{{noti.titulo}}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="date">
+                          <div class="row noti">
+                            <div class="col-auto">
+                              <p class="data">{{noti.tempo}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ng-template #outrasNoti>
+                  <div class="row notif">
+                    <div class="card notificacao-card">
+                      <div class="card-body">
+                        <div class="col-auto">
+                          <div class="content">
+                            <div class="row">
+                              <div class="col-auto">
+                                <div class="container">
+                                  <img src="../../../assets/img/person.png" class="image" />
+
+                                  <i *ngIf="noti.type == 2" class="bi bi-chat-fill image-icon"></i>
+                                  <i *ngIf="noti.type == 3" class="bi bi-suit-heart-fill image-icon"></i>
+                                </div>
+                              </div>
+                              <div class="col-sm-2 user-info">
+                                <div class="row">
+                                  <p>{{noti.user.nome}}</p>
+                                  <p class="hashtag">{{noti.user.hashtag}}</p>
+                                </div>
+                              </div>
+                              <div class="col-auto conteudo">
+                                <p>{{noti.titulo}}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="date">
+                            <div class="row">
+                              <div class="col-auto">
+                                <p class="data">{{noti.tempo}}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Anuncios</h5>
+          <div class="notificacoes-list col flex-nowrap">
+            <div *ngFor="let anuncio of notificacoes">
+              <div class="row" *ngIf="anuncio.type==-1">
+                <div class="card anuncio-card">
+                  <div class="card-body">
+                    <div class="col-auto">
+                      <div class="col-auto">
+                        <div class="row admin-info">
+                          <div class="col-auto">
+                            <h4>{{anuncio.user.nome}}</h4>
+                          </div>
+                          <div class="col-auto">
+                            <p class="hashtag">{{anuncio.user.hashtag}}</p>
+                          </div>
+                        </div>
+                        <div class="row content">
+                          <p>
+                            {{anuncio.titulo}}
+                          </p>
+                        </div>
+
+                        <div class="date">
+                          <div class="row">
+                            <div class="col-auto">
+                              <p class="data">há 30 minutos</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

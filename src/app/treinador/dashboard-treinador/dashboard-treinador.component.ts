@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from 'src/app/header/services/header.service';
 
 @Component({
   selector: 'app-dashboard-treinador',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardTreinadorComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private headerService: HeaderService,
+
+
+  ) { }
 
   ngOnInit(): void {
+    this.headerService.setTitle('Dashboard')
   }
 
 }

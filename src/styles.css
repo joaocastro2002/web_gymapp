@@ -1,5 +1,9 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
+* {
+  font-family: "Rubik";
+}
+
 .logoGymApp {
   width: 60%;
 }
