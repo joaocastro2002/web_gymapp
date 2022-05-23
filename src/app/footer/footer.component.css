@@ -1,15 +1,11 @@
-.copy {
-  display: flex;
-  justify-content: center;
 
 
-}
-.copy p {
-  padding: 0px;
-  display: flex;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: 0px;
-  color: grey;
+.footer {
+position: absolute;
+bottom: 0px;
+width: 100%;
+height: 60px;
+line-height: 60px;
+text-align: center;
+color:grey;
 }
