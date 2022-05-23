@@ -52,6 +52,7 @@ import { BotaoAvaliacaoComponent } from './calendario-desafio-avaliacao/botao-av
 import { CalendarioComponent } from './calendario-desafio-avaliacao/calendario/calendario.component';
 import { SetaEsquerdaComponent } from './calendario-desafio-avaliacao/seta-esquerda/seta-esquerda.component';
 import { SetaDireitaComponent } from './calendario-desafio-avaliacao/seta-direita/seta-direita.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -110,6 +111,7 @@ import { SetaDireitaComponent } from './calendario-desafio-avaliacao/seta-direit
     CalendarioComponent,
     SetaEsquerdaComponent,
     SetaDireitaComponent,
+    FooterComponent,
 
 
   ],
