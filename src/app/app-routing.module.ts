@@ -12,6 +12,7 @@ import { VerPublicacaoComponent } from './ver-publicacao/ver-publicacao.componen
 import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisica/criar-avaliacao-fisica.component';
 import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-exercicio.component';
 import { CalendarioDesafioAvaliacaoComponent } from './calendario-desafio-avaliacao/calendario-desafio-avaliacao.component';
+import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.component';
 
 //Rotas para paginas
 const routes: Routes = [
@@ -29,7 +30,10 @@ const routes: Routes = [
   { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
   { path: 'calendarioDesafioAvaliacao', component: CalendarioDesafioAvaliacaoComponent },
-  { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent }
+  { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
+  { path: 'treinador/alunos', component: EcraAlunosComponent },
+
+
 
 ];
 

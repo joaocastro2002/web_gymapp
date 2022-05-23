@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -52,7 +53,9 @@ import { BotaoAvaliacaoComponent } from './calendario-desafio-avaliacao/botao-av
 import { CalendarioComponent } from './calendario-desafio-avaliacao/calendario/calendario.component';
 import { SetaEsquerdaComponent } from './calendario-desafio-avaliacao/seta-esquerda/seta-esquerda.component';
 import { SetaDireitaComponent } from './calendario-desafio-avaliacao/seta-direita/seta-direita.component';
-
+import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.component';
+import { PesquisaComponent } from './treinador/ecra-alunos/pesquisa/pesquisa.component';
+import { CartoesComponent } from './treinador/ecra-alunos/cartoes/cartoes.component';
 
 
 
@@ -110,6 +113,9 @@ import { SetaDireitaComponent } from './calendario-desafio-avaliacao/seta-direit
     CalendarioComponent,
     SetaEsquerdaComponent,
     SetaDireitaComponent,
+    EcraAlunosComponent,
+    PesquisaComponent,
+    CartoesComponent,
 
 
   ],
@@ -118,6 +124,7 @@ import { SetaDireitaComponent } from './calendario-desafio-avaliacao/seta-direit
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    Ng2SearchPipeModule,
     HttpClientModule,
   ],
   providers: [],
