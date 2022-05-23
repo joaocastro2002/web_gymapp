@@ -33,6 +33,9 @@ import { VerPublicacaoComponent } from './ver-publicacao/ver-publicacao.componen
 import { NovaPublicacaoComponent } from './ver-publicacao/nova-publicacao/nova-publicacao.component';
 import { PublicacaoComponent } from './ver-publicacao/publicacao/publicacao.component';
 import { UtilizadoresLogadosComponent } from './ver-publicacao/utilizadores-logados/utilizadores-logados.component';
+import { NotificacoesComponent } from './notificacoes/notificacoes.component';
+import { NotificacoesAplicacaoComponent } from './notificacoes/notificacoes-aplicacao/notificacoes-aplicacao.component';
+
 
 
 
@@ -70,7 +73,10 @@ import { UtilizadoresLogadosComponent } from './ver-publicacao/utilizadores-loga
     NovaPublicacaoComponent,
     PublicacaoComponent,
     UtilizadoresLogadosComponent,
-    VerColocacoesComponent
+    VerColocacoesComponent,
+    NotificacoesComponent,
+    NotificacoesAplicacaoComponent,
+
 
   ],
   imports: [

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MeusExercicios } from './meus-exercicios';
+import { Router } from '@angular/router';
+import { TokenStorageService } from 'src/app/auth/services/token-storage.service';
+import { IMeusExerciciosTreinador, MeusExerciciosTreinadorService } from '../services/meus-exercicios-treinador.service';
 
 @Component({
   selector: 'app-meus-exercicios',
@@ -7,22 +9,22 @@ import { MeusExercicios } from './meus-exercicios';
   styleUrls: ['./meus-exercicios.component.css']
 })
 export class MeusExerciciosComponent implements OnInit {
-  meusExercicios: MeusExercicios[] = []
-  constructor() { }
+  meusExercicios = [];
+  constructor(
+    private meusExerciciosService: MeusExerciciosTreinadorService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getExercicios()
   }
 
   getExercicios() {
-    this.meusExercicios = [
-      { nome: "Exercício 1" },
-      { nome: "Exercício 2" },
-      { nome: "Exercício 3" },
-      { nome: "Exercício 4" },
-      { nome: "Exercício 5" },
-      { nome: "Exercício 6" },
-    ]
+    this.meusExerciciosService.getExercicios().subscribe({
+      next: data => {
+        this.meusExercicios = data
+      }
+    })
+
   }
 
 }

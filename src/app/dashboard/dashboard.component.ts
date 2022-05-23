@@ -26,10 +26,11 @@ export class DashboardComponent implements OnInit {
   }
 
   getNumTreinos(): void {
+
     const user = this.token.getUser()
     this.planoTreinoService.getTreinos(user.perfil.uid).subscribe({
       next: data => {
-      this.NTreinos = data.treinos.length
+        this.NTreinos = data.treinos.length
       }
     })
 
