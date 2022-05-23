@@ -15,23 +15,24 @@ export class DesafiosDecorrerBreafComponent implements OnInit {
   }
 
   getDesafios() {
-    this.desafios = [
-      {
-        nome: 'Desafio 1',
-        modalidade: 'Modalidade 1',
-        data: '01/01/2020',
-      },
-      {
-        nome: 'Desafio 1',
-        modalidade: 'Modalidade 1',
-        data: '01/01/2020',
-      },
-      {
-        nome: 'Desafio 1',
-        modalidade: 'Modalidade 1',
-        data: '01/01/2020',
-      },
-    ]
+    this.desafios =
+      this.desafios = [
+        {
+          nome: 'Desafio 1',
+          modalidade: 'Modalidade 1',
+          data: '01/01/2020',
+        },
+        {
+          nome: 'Desafio 1',
+          modalidade: 'Modalidade 1',
+          data: '01/01/2020',
+        },
+        {
+          nome: 'Desafio 1',
+          modalidade: 'Modalidade 1',
+          data: '01/01/2020',
+        },
+      ]
   }
 
 }

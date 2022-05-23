@@ -39,6 +39,8 @@ import { VerPublicacaoComponent } from './ver-publicacao/ver-publicacao.componen
 import { NovaPublicacaoComponent } from './ver-publicacao/nova-publicacao/nova-publicacao.component';
 import { PublicacaoComponent } from './ver-publicacao/publicacao/publicacao.component';
 import { UtilizadoresLogadosComponent } from './ver-publicacao/utilizadores-logados/utilizadores-logados.component';
+import { NotificacoesComponent } from './notificacoes/notificacoes.component';
+import { NotificacoesAplicacaoComponent } from './notificacoes/notificacoes-aplicacao/notificacoes-aplicacao.component';
 import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisica/criar-avaliacao-fisica.component';
 import { CriarMedidasComponent } from './treinador/criar-avaliacao-fisica/criar-medidas/criar-medidas.component';
 import { IdentificacaoAlunoComponent } from './treinador/criar-avaliacao-fisica/identificacao-aluno/identificacao-aluno.component';
@@ -98,6 +100,8 @@ import { FooterComponent } from './footer/footer.component';
     PublicacaoComponent,
     UtilizadoresLogadosComponent,
     VerColocacoesComponent,
+    NotificacoesComponent,
+    NotificacoesAplicacaoComponent,
     CriarAvaliacaoFisicaComponent,
     CriarMedidasComponent,
     IdentificacaoAlunoComponent,
