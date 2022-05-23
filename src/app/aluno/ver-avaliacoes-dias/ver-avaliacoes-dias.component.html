@@ -1,0 +1,115 @@
+<app-header></app-header>
+
+<div class="main">
+    <div class="row row1">
+      <app-avaliacoes-realizadas></app-avaliacoes-realizadas>
+    </div>
+    <div class="row row2">
+        <div class="col-sm-9" style="padding-right: 0px">
+            <div class="row linha1">
+              <div class="col-auto coluna1">
+                  <a routerLink="/treinador/compararAvaliacao"><button class="btn btn-lg pull-right" > Comparar</button></a>
+              </div>
+              <div class="col-auto coluna2">
+                  <button type="button ver" class="btn btn-lg">
+                      <a href="#">Ver imagens</a>
+                  </button>
+              </div>
+              <div class="col-auto coluna3">
+                  <button
+                    type="button"
+                    id="modalBtn"
+                    class="btn btn-lg shadow-none"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Agendar Avaliação
+                  </button>
+              </div>
+            </div>
+            <div class="row linha2">
+              <app-dados-avaliacoes-realizadas></app-dados-avaliacoes-realizadas>
+            </div>
+        </div> 
+        <div class="col-sm-2">
+          <app-medidas-avaliacoes-realizadas></app-medidas-avaliacoes-realizadas>
+        </div>     
+    </div>
+</div>
+<footer>
+    <p>&copy; 2022 ResCode All rights reserved</p>
+</footer>
+<!-- Modal do pedido de agendamento de avaliação-->
+<div
+class="modal fade"
+id="exampleModal"
+tabindex="-1"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-md">
+  <div class="modal-content">
+    <div class="row">
+      <div class="col-sm-9">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Agendar avaliações
+          </h5>
+        </div>
+      </div>
+      <div class="col-sm-1">
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+    </div>
+
+    <div class="modal-body">
+      <div class="row days">
+        <label for="start">Insira um dia para a avaliação:</label>
+
+        <input
+          type="date"
+          id="start"
+          name="trip-start"
+          value="2022-04-30"
+          min="2022-05-5"
+          max="2032-12-31"
+        />
+      </div>
+      <div class="row hours">
+        <label for="appt">Insira uma hora para a avaliação:</label>
+
+        <input
+          id="appt-time"
+          type="time"
+          name="appt-time"
+          value="08:00"
+        />
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        id="closeBtn"
+        class="btn btn-secondary"
+        data-bs-dismiss="modal"
+      >
+        Cancelar
+      </button>
+      <!--quando carregamos no butão guardar, a modal fecha e é enviado um alerta a dizer que a avaliação foi agendada com sucesso-->
+      <button
+        type="button"
+        id="saveBtn"
+        class="btn btn-primary"
+        data-bs-dismiss="modal"
+        onclick="alert('A avaliação foi agendada com sucesso!');"
+      >
+        Guardar
+      </button>
+    </div>
+  </div>
+</div>

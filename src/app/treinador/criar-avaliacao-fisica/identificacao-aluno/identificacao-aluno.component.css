@@ -1,0 +1,62 @@
+/* Add a black background color to the top navigation */
+
+/* --red: #FF5050;
+--white: #F2F2F2;
+--black: #2C2C2C; */
+/*mockup notificação inicio*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik";
+}
+
+h1 {
+  letter-spacing: 10px;
+  font-weight: bold;
+}
+
+
+.linha {
+  top: 40px;
+}
+
+.identificacao p {
+ 
+  justify-content: center;
+}
+.box {
+  display: flex;
+  justify-content: center;
+}
+.left {
+  top: 50px;
+  border-radius: 1.2rem;
+  left:10px;
+  padding: 10px;
+  box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.15), 0 4px 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+
+
+p {
+  padding-bottom: 0px;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-weight: bolder;
+}
+
+.amj p {
+  padding-top: 0px;
+  padding-left: 10px;
+  margin: 0px;
+ 
+  color: grey;
+}
+.identificacao p {
+  display: flex;
+  justify-content: flex-start;
+  color: #ff5050;
+}
+
+
+

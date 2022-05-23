@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-medidas-ver-avaliacao',
-  templateUrl: './medidas-ver-avaliacao.component.html',
-  styleUrls: ['./medidas-ver-avaliacao.component.css']
+  selector: 'app-medidas-comparar-avaliacao',
+  templateUrl: './medidas-comparar-avaliacao.component.html',
+  styleUrls: ['./medidas-comparar-avaliacao.component.css']
 })
-export class MedidasVerAvaliacaoComponent implements OnInit {
-  
+export class MedidasCompararAvaliacaoComponent implements OnInit {
+
   medidas = []
 
   constructor() { }

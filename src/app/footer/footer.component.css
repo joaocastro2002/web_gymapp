@@ -1,0 +1,15 @@
+.copy {
+  display: flex;
+  justify-content: center;
+
+
+}
+.copy p {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  color: grey;
+}
