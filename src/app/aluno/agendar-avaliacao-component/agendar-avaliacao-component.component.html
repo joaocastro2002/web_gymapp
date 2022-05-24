@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div class="main">
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <input type="text" class="form-control" id="ginasioId" placeholder="Ginásio" formControlName="ginasioId" name="email">
+        </div>
+        <div class="row">
+            <input type="text" class="form-control" id="dataAgendamento" placeholder="Data do agendamento" formControlName="dataAgendamento" name="email">
+        </div>
+        <div class="row linha-botao2">
+            <button class="btn btn-primary botao2" type="submit">
+              Guardar Agendamento
+            </button>
+        </div>
+    </form>
+</div>
+
+<app-footer><app-footer></app-footer>
