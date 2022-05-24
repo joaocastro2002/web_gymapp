@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AgendamentosDesafiosService, IAgendamentosDesafios } from '../services/agendamentos-desafios.service';
 import { AgendamentoDesafio } from './agendamento-desafio';
 
 @Component({
@@ -7,56 +8,37 @@ import { AgendamentoDesafio } from './agendamento-desafio';
   styleUrls: ['./agendamentos-desafios.component.css']
 })
 export class AgendamentosDesafiosComponent implements OnInit {
-  agendamentosDesafios: AgendamentoDesafio[] = []
-  constructor() { }
+  agendamentosDesafios: IAgendamentosDesafios[] = []
+  constructor(
+    private agendamentosDesafiosService: AgendamentosDesafiosService
+  ) { }
+
+
 
   ngOnInit(): void {
     this.getAgendamentos()
   }
 
   getAgendamentos(): void {
-    this.agendamentosDesafios = [
-      {
-        nome: "Desafio 1",
-        modalidade: "Modalidade 1",
-        data: "01/01/2020",
+    this.agendamentosDesafiosService.getAgendamentos().subscribe({
+      next: data => {
+        let aceites = data.filter(agendamento => agendamento.isAceite)
+        for (let agendamento of aceites) {
+          let today = new Date();
+          let agendamentoDate = new Date(agendamento.data_agendamento);
+
+          if (agendamentoDate.getDate() == today.getDate() && agendamentoDate.getMonth() == today.getMonth() && agendamentoDate.getFullYear() == today.getFullYear()) {
+            agendamento.data_agendamento = agendamento.data_agendamento.split('T')[0]
+            this.agendamentosDesafios.push(agendamento)
+          }
+        }
+        console.log(this.agendamentosDesafios)
       },
-      {
-        nome: "Desafio 2",
-        modalidade: "Modalidade 2",
-        data: "01/01/2020",
-      },
-      {
-        nome: "Desafio 3",
-        modalidade: "Modalidade 3",
-        data: "01/01/2020",
-      },
-      {
-        nome: "Desafio 3",
-        modalidade: "Modalidade 3",
-        data: "01/01/2020",
-      },
-      {
-        nome: "Desafio 3",
-        modalidade: "Modalidade 3",
-        data: "01/01/2020",
-      },
-      {
-        nome: "Desafio 3",
-        modalidade: "Modalidade 3",
-        data: "01/01/2020",
-      },
-      {
-        nome: "Desafio 3",
-        modalidade: "Modalidade 3",
-        data: "01/01/2020",
-      },
-      {
-        nome: "Desafio 3",
-        modalidade: "Modalidade 3",
-        data: "01/01/2020",
+      error: error => {
+
       }
-    ]
+    })
+
   }
 
 }
