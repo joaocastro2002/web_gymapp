@@ -36,9 +36,6 @@ const routes: Routes = [
   { path: 'calendarioDesafioAvaliacao', component: CalendarioDesafioAvaliacaoComponent },
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
   { path: 'treinador/alunos', component: EcraAlunosComponent },
-
-
-
 ];
 
 @NgModule({
