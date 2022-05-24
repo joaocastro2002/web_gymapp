@@ -1,131 +1,44 @@
 <div class="card cartao1">
-    <div class="card-body">
+    <div class="card-body" style="padding-bottom: 45px">
         <div class="container">
-            <h5 class="title">Dados</h5>
-            <div class="row info1">
-                <div class="col-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="title">Peso</h6>
-                            <div class="row int">
-                                <div class="col-sm-1">
-                                    <img src="../../../../assets/img/weight-scale.png" height="80">
-                                </div>
-                                <div class="col-sm-8">
-                                    <p class="kg1">85 Kg</p>
-                                </div>
-                            </div>
-                        </div>
+        <h5 class="title">Dados</h5>
+        <div class="row info1">
+            <div class="col-auto" *ngFor="let dado of dadosAvaliacao1">
+            <div class="card">
+                <div class="card-body">
+                <h6 class="title">{{dado.nome}}</h6>
+                <div class="row int">
+                    <div class="col-sm-1">
+                    <img
+                        src="../../../../assets/img/weight-scale.png"
+                        height="80"
+                    />
+                    </div>
+                    <div class="col-sm-8">
+                    <p>{{dado.valor}}</p>
                     </div>
                 </div>
-                <div class="col-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="title">Massa Muscular</h6>
-                            <div class="row int">
-                                <div class="col-sm-1">
-                                    <img src="../../../../assets/img/muscle.png" height="80">
-                                </div>
-                                <div class="col-sm-8">
-                                    <p class="kg2">35 Kg</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="title">Gordura Corporal</h6>
-                            <div class="row int">
-                                <div class="col-sm-1">
-                                    <img src="../../../../assets/img/liposuction.png" height="80">
-                                </div>
-                                <div class="col-sm-8">
-                                    <p class="numb1">30%</p>
-                                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row info2">
+            <div class="col-auto" *ngFor="let dado of dadosAvaliacao2">
+                <div class="card">
+                    <div class="card-body fat">
+                        <h6 class="title">{{dado.nome}}</h6>
+                        <div class="row int">
+                            <div class="col-sm-1">
+                            <img src="../../../../assets/img/trans-fat.png" height="80" />
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="title">Gordura Visceral</h6>
-                            <div class="row int">
-                                <div class="col-sm-1">
-                                    <img src="../../../../assets/img/body-fat.png" height="80">
-                                </div>
-                                <div class="col-sm-8">
-                                    <p class="numb2">10%</p>
-                                </div>
+                            <div class="col-sm-8">
+                            <p class="numb3">{{dado.valor}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row info2">
-                <div class="col-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="title">Água</h6>
-                            <div class="row int">
-                                <div class="col-sm-1">
-                                    <img src="../../../../assets/img/trans-fat.png" height="80">
-                                </div>
-                                <div class="col-sm-8">
-                                    <p class="numb3">73%</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="title">Proteína</h6>
-                            <div class="row int">
-                                <div class="col-sm-1">
-                                    <img src="../../../../assets/img/proteins.png" height="80">
-                                </div>
-                                <div class="col-sm-8">
-                                    <p class="numb4">50%</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="title">Massa Óssea</h6>
-                            <div class="row int">
-                                <div class="col-sm-1">
-                                    <img src="../../../../assets/img/bone.png" height="80">
-                                </div>
-                                <div class="col-sm-8">
-                                    <p class="kg3">10 Kg</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="title">Metabolismo Basal</h6>
-                            <div class="row int">
-                                <div class="col-sm-1">
-                                    <img src="../../../../assets/img/kcal.png" height="80">
-                                </div>
-                                <div class="col-sm-8 kcal">
-                                    <p class="kcal1">50 Kcal</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
         </div>
     </div>
 </div>
