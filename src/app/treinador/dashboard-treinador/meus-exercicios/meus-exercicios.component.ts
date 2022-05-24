@@ -14,7 +14,8 @@ export class MeusExerciciosComponent implements OnInit {
   constructor(
     private meusExerciciosService: MeusExerciciosTreinadorService,
     private sessionManager: SessionManagerService,
-    private token: TokenStorageService,) { }
+    private token: TokenStorageService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getExercicios()
@@ -36,13 +37,11 @@ export class MeusExerciciosComponent implements OnInit {
             next: data => {
               this.token.saveToken(data.token)
 
-              this.meusExerciciosService.getExercicios().subscribe({
-                next: data => {
-
-                  this.meusExercicios = data
-
-                }
-              })
+              this.getExercicios()
+            },
+            error: error => {
+              console.log(error)
+              this.router.navigate(['/login'])
             }
           })
         }
