@@ -17,7 +17,7 @@ export class VerColocacoesComponent implements OnInit {
     private top10Service: Top10Service,
     private sessionManager: SessionManagerService,
     private token: TokenStorageService,
-  ) { }
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getColocado()
@@ -40,13 +40,11 @@ export class VerColocacoesComponent implements OnInit {
             next: data => {
               this.token.saveToken(data.token)
 
-              this.top10Service.getTop10().subscribe({
-                next: data => {
-
-                  this.colocacoes = data
-
-                }
-              })
+              this.getColocado()
+            },
+            error: error => {
+              console.log(error)
+              this.router.navigate(['/login'])
             }
           })
         }
