@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SessionManagerService } from 'src/app/auth/services/session-manager-service.service';
 import { TokenStorageService } from 'src/app/auth/services/token-storage.service';
 import { ITop10, Top10Service } from '../services/top10.service';
 
@@ -14,6 +15,8 @@ export class VerColocacoesComponent implements OnInit {
 
   constructor(
     private top10Service: Top10Service,
+    private sessionManager: SessionManagerService,
+    private token: TokenStorageService,
   ) { }
 
   ngOnInit(): void {
@@ -21,12 +24,32 @@ export class VerColocacoesComponent implements OnInit {
   }
 
   getColocado() {
+
+
     this.top10Service.getTop10().subscribe({
       next: data => {
+
         this.colocacoes = data
+
       },
       error: error => {
-        console.log(error)
+
+        if (error.status == 401) {
+
+          this.sessionManager.getNewToken().subscribe({
+            next: data => {
+              this.token.saveToken(data.token)
+
+              this.top10Service.getTop10().subscribe({
+                next: data => {
+
+                  this.colocacoes = data
+
+                }
+              })
+            }
+          })
+        }
       }
     })
 
