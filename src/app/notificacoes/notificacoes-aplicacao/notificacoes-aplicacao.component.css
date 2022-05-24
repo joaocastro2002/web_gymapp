@@ -3,6 +3,7 @@
 }
 .col-sm-6 {
   margin: 0px;
+  padding: 0px;
 }
 
 .notificacoes-list {
@@ -22,6 +23,7 @@
 
 .notificacoes.row {
   justify-content: space-around;
+  width: 100%;
 }
 
 .btn-dropdown-filtro {
