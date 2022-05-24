@@ -10,7 +10,7 @@
   margin: 0px;
   padding-bottom: 20px;
   top: 30px;
-
+  height: 60%;
   background-color: black;
   border-radius: 1.2rem;
 
@@ -23,6 +23,7 @@
 .publicacoes-white {
   padding: 20px;
   margin: 0px;
+  height: 75%;
   padding-bottom: 20px;
   border-radius: 1.2rem;
 }
