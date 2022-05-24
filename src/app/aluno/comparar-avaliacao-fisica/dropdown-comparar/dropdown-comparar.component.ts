@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class DropdownCompararComponent implements OnInit {
 
+  // vamos declarar um array
   dataAgendamento = []
 
   mySelect = '2';
@@ -25,6 +26,7 @@ export class DropdownCompararComponent implements OnInit {
     private router: Router
   ) { }
 
+  // ao iniciar vamos ter esta função
   ngOnInit(): void {
     this.getData()
   }
@@ -34,6 +36,7 @@ export class DropdownCompararComponent implements OnInit {
     this.dropdownCompararService.getDataAvaliacao().subscribe({
       next:avaliacoes => {
 
+        // percorrer a lista de avaliacoes e para cada elemento mostrar só a data - tudo o que está depois do T desaparece (as horas)
         for (let avaliacao of avaliacoes) {
 
             let data = avaliacao.data.split('T')[0]
@@ -63,6 +66,7 @@ export class DropdownCompararComponent implements OnInit {
   }
 
   selectChange() {
+    // para mudar os valores no dropdown para a caixa de texto ao selecionar numa data
     this.selectedValue = this.dropCompararService.getDropDownText(this.selectedValue, this.dataAgendamento)[0].valor;
   }
 }
