@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SessionManagerService } from 'src/app/auth/services/session-manager-service.service';
+import { TokenStorageService } from 'src/app/auth/services/token-storage.service';
 import { AgendamentosDesafiosService, IAgendamentosDesafios } from '../services/agendamentos-desafios.service';
 import { AgendamentoDesafio } from './agendamento-desafio';
 
@@ -10,7 +13,10 @@ import { AgendamentoDesafio } from './agendamento-desafio';
 export class AgendamentosDesafiosComponent implements OnInit {
   agendamentosDesafios: IAgendamentosDesafios[] = []
   constructor(
-    private agendamentosDesafiosService: AgendamentosDesafiosService
+    private agendamentosDesafiosService: AgendamentosDesafiosService,
+    private sessionManager: SessionManagerService,
+    private token: TokenStorageService,
+    private router: Router
   ) { }
 
 
@@ -19,9 +25,11 @@ export class AgendamentosDesafiosComponent implements OnInit {
     this.getAgendamentos()
   }
 
+
   getAgendamentos(): void {
     this.agendamentosDesafiosService.getAgendamentos().subscribe({
       next: data => {
+
         let aceites = data.filter(agendamento => agendamento.isAceite)
         for (let agendamento of aceites) {
           let today = new Date();
@@ -32,10 +40,24 @@ export class AgendamentosDesafiosComponent implements OnInit {
             this.agendamentosDesafios.push(agendamento)
           }
         }
-        console.log(this.agendamentosDesafios)
+
       },
       error: error => {
 
+        if (error.status == 401) {
+
+          this.sessionManager.getNewToken().subscribe({
+            next: data => {
+              this.token.saveToken(data.token)
+
+              this.getAgendamentos()
+            },
+            error: error => {
+              console.log(error)
+              this.router.navigate(['/login'])
+            }
+          })
+        }
       }
     })
 

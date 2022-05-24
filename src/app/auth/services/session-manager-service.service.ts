@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable, of } from 'rxjs';
 import { TokenStorageService } from './token-storage.service';
 
 
@@ -12,19 +13,7 @@ export class SessionManagerService {
 
   constructor(private http: HttpClient, private token: TokenStorageService, private router: Router) { }
 
-  public generateNewSession() {
-    this.http.post<{ token: string }>(`${api_url}auth/token`, { refresh_token: this.token.getRefreshToken() }).subscribe({
-      next: data => {
-        console.log(data)
-        this.token.saveToken(data.token)
-        console.log('dados: ' + data.token)
-      },
-      error: error => {
-        console.log('Error: ' + error)
-        this.token.signOut();
-
-        this.router.navigate(['/login'])
-      }
-    })
+  public getNewToken(): Observable<any> {
+    return this.http.post<{ token: string }>(`${api_url}auth/token`, { refresh_token: this.token.getRefreshToken() })
   }
 }

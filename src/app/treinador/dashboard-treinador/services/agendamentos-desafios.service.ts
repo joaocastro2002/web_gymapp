@@ -52,37 +52,27 @@ export class AgendamentosDesafiosService {
   getAgendamentos(): Observable<Array<IAgendamentosDesafios>> {
     const token = this.token.getToken()
 
-    if (!token) {
-      console.log('aqui')
-      this.sessionManager.generateNewSession()
+
+    if (token == null) {
+      this.sessionManager.getNewToken().subscribe({
+        next: data => {
+          this.token.saveToken(data.token)
+
+          return this.getAgendamentos()
+        }
+      })
+    } else {
+
+      console.log(this.token.getToken())
+
+      const headers = new HttpHeaders({
+        'Authorization': 'Bearer ' + this.token.getToken()
+      })
+
+      return this.http.get<Array<IAgendamentosDesafios>>(`${api_url}treinador/agenda/desafios`, { headers: headers })
     }
 
-    const headers = new HttpHeaders({
-      'Authorization': 'Bearer ' + this.token.getToken()
-    })
 
-    return this.http.get<Array<IAgendamentosDesafios>>(`${api_url}treinador/agenda/desafios`, { headers: headers }).pipe(
-      catchError(this.handleError('getExercicios', [])) // then handle the error
-    );
-  }
-
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-
-      console.error(error.status); // log to console instead
-      if (error.status == 401) {
-        this.sessionManager.generateNewSession()
-        this.getAgendamentos().subscribe({
-          next: data => {
-            return data
-          },
-          error: error => {
-            return of(result as T);
-          }
-        })
-      }
-      return of(result as T);
-    };
   }
 
 }

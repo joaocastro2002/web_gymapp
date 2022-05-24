@@ -35,39 +35,26 @@ export class MeusExerciciosTreinadorService {
     private sessionManager: SessionManagerService) { }
   getExercicios(): Observable<Array<IMeusExerciciosTreinador>> {
     const token = this.token.getToken()
+    if (token == null) {
+      this.sessionManager.getNewToken().subscribe({
+        next: data => {
+          this.token.saveToken(data.token)
 
-    if (!token) {
-      console.log('aqui')
-      this.sessionManager.generateNewSession()
+          return this.getExercicios()
+        }
+      })
+    } else {
+
+      console.log(this.token.getToken())
+
+      const headers = new HttpHeaders({
+        'Authorization': 'Bearer ' + this.token.getToken()
+      })
+
+      return this.http.get<Array<IMeusExerciciosTreinador>>(`${api_url}treinador/exercicios/treinador`, { headers: headers })
     }
-
-    const headers = new HttpHeaders({
-      'Authorization': 'Bearer ' + this.token.getToken()
-    })
-
-    return this.http.get<Array<IMeusExerciciosTreinador>>(`${api_url}treinador/exercicios/treinador`, { headers: headers }).pipe(
-      catchError(this.handleError('getExercicios', [])) // then handle the error
-    );
   }
 
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-
-      console.error(error.status); // log to console instead
-      if (error.status == 401) {
-        this.sessionManager.generateNewSession()
-        this.getExercicios().subscribe({
-          next: data => {
-            return data
-          },
-          error: error => {
-            return of(result as T);
-          }
-        })
-      }
-      return of(result as T);
-    };
-  }
 
 
 
