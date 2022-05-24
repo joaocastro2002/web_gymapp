@@ -54,9 +54,4 @@ export class MeusExerciciosTreinadorService {
       return this.http.get<Array<IMeusExerciciosTreinador>>(`${api_url}treinador/exercicios/treinador`, { headers: headers })
     }
   }
-
-
-
-
-
 }
