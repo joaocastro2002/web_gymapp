@@ -11,9 +11,7 @@ export interface IAgendarAvaliacaoService {
   dataAgendamento: string
 }
 
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+
 
 @Injectable({
   providedIn: 'root'
@@ -21,12 +19,20 @@ const httpOptions = {
 export class AgendarAvaliacaoService {
 
   constructor(
+    // para fazer os pedidos http
     private http: HttpClient,
     private token: TokenStorageService,
     private sessionManager: SessionManagerService
   ) { }
+  
+  httpOptions = {
+    // primeiro digo que vou comunicar em json e depois digo que tenho este token
+    headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + this.token.getToken() })
+  };
 
+  // funcao que vai receber os nossos dados (data) para mandar para a api
   agenda(data: any) : Observable<any>{
-    return this.http.post(`${api_url}aluno/agenda/avaliacao/`, data, httpOptions)
+    console.log(data)
+    return this.http.post(`${api_url}aluno/agenda/avaliacao/`, data, this.httpOptions)
   }
 }

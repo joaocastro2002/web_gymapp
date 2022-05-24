@@ -1,12 +1,12 @@
 <app-header></app-header>
 
 <div class="main">
-    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="agendaForm" (ngSubmit)="onSubmit()">
         <div class="row">
-            <input type="text" class="form-control" id="ginasioId" placeholder="Ginásio" formControlName="ginasioId" name="email">
+            <input type="text" class="form-control" id="ginasioId" placeholder="Ginásio" formControlName="ginasioId" name="ginasioId">
         </div>
         <div class="row">
-            <input type="text" class="form-control" id="dataAgendamento" placeholder="Data do agendamento" formControlName="dataAgendamento" name="email">
+            <input type="datetime-local" class="form-control" id="dataAgendamento" placeholder="Data do agendamento" formControlName="dataAgendamento" name="dataAgendamento">
         </div>
         <div class="row linha-botao2">
             <button class="btn btn-primary botao2" type="submit">

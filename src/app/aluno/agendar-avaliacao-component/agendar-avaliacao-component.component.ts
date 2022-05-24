@@ -14,26 +14,27 @@ export class AgendarAvaliacaoComponentComponent implements OnInit {
   agendaForm: FormGroup;
 
   constructor(private headerService: HeaderService, private agendarAvaliacaoService: AgendarAvaliacaoService, private formBuilder: FormBuilder) { }
-
-  checkoutForm = this.formBuilder.group({
-    ginasioId: '',
-    dataAgendamento: ''
-  });
-
-  // quando o componente é inicializado
+  
+  // ao iniciar
   ngOnInit(): void {
     this.headerService.setTitle('Agendar Avaliação')
+
     this.agendaForm = new FormGroup({
       'ginasioId': new FormControl(null, Validators.required),
       'dataAgendamento': new FormControl(null, Validators.required)
     })
   }
 
-  // quando submetemos o form
-  // onSubmit(): void {
-  //   this.agendarAvaliacaoService.agenda(this.agendaForm.value).subscribe({
-  //   }),
-  // }
+  onSubmit(): void {
+    // chamar a funcao agenda do meu servico (o subscribe espera pela resposta da funcao agenda)
+    this.agendarAvaliacaoService.agenda(this.agendaForm.value).subscribe({
+      next: data => {
+        console.log(data)
+      }, error: erro => {
+        console.log(erro)
+      }
+    });
+  }
   
 
 }
