@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { TokenStorageService } from 'src/app/auth/services/token-storage.service';
 
-const api_url = "http://localhost:8000/api/v1/"
+const api_url = "http://localhost:2900/"
 
 
 @Injectable({
@@ -14,12 +14,12 @@ export class TreinosService {
     private http: HttpClient,
     private token: TokenStorageService) { }
 
-  getTreinos(){
+  getTreinos() {
     const headers = new HttpHeaders({
-      'Authorization':'Bearer ' + this.token.getToken()
+      'Authorization': 'Bearer ' + this.token.getToken()
     })
-    return this.http.get(`${api_url}aluno/treinos/`, {headers: headers})
+    return this.http.get(`${api_url}aluno/treinos/`, { headers: headers })
   }
 
-  
+
 }

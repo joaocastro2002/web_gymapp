@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -65,10 +64,7 @@ import { BotaoAdicionarMarcaComponent } from './admin/gerir-marcas/botao-adicion
 import { FiltrarMarcasComponent } from './admin/gerir-marcas/filtrar-marcas/filtrar-marcas.component';
 import { CardMarcasComponent } from './admin/gerir-marcas/card-marcas/card-marcas.component';
 import { ModalAdicionarMarcaComponent } from './admin/gerir-marcas/modal-adicionar-marca/modal-adicionar-marca.component';
-
-
-
-
+import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
 
 
 @NgModule({
@@ -133,15 +129,13 @@ import { ModalAdicionarMarcaComponent } from './admin/gerir-marcas/modal-adicion
     FiltrarMarcasComponent,
     CardMarcasComponent,
     ModalAdicionarMarcaComponent,
-
-
+    AgendarAvaliacaoComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    Ng2SearchPipeModule,
     HttpClientModule,
   ],
   providers: [],

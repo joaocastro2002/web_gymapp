@@ -5,7 +5,7 @@ footer p{
     margin-bottom: 0px;
 }
 
-.direita .btn-lg{
+.btn-lg{
     background-color: #FF5050;
     border-color: #FF5050;
     border-radius: 30px;
@@ -14,6 +14,11 @@ footer p{
     text-align: center;
     letter-spacing: 1px;
     color: #ffffff;
+    margin-right: 30px;
+}
+
+.col-auto{
+    padding: 0px;
 }
 
 /* row 1 */

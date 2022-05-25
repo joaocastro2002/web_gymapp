@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SessionManagerService } from 'src/app/auth/services/session-manager-service.service';
 import { TokenStorageService } from 'src/app/auth/services/token-storage.service';
 import { IMeusExerciciosTreinador, MeusExerciciosTreinadorService } from '../services/meus-exercicios-treinador.service';
 
@@ -12,6 +13,8 @@ export class MeusExerciciosComponent implements OnInit {
   meusExercicios = [];
   constructor(
     private meusExerciciosService: MeusExerciciosTreinadorService,
+    private sessionManager: SessionManagerService,
+    private token: TokenStorageService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -19,9 +22,29 @@ export class MeusExerciciosComponent implements OnInit {
   }
 
   getExercicios() {
+
     this.meusExerciciosService.getExercicios().subscribe({
       next: data => {
+
         this.meusExercicios = data
+
+      },
+      error: error => {
+
+        if (error.status == 401) {
+
+          this.sessionManager.getNewToken().subscribe({
+            next: data => {
+              this.token.saveToken(data.token)
+
+              this.getExercicios()
+            },
+            error: error => {
+              console.log(error)
+              this.router.navigate(['/login'])
+            }
+          })
+        }
       }
     })
 

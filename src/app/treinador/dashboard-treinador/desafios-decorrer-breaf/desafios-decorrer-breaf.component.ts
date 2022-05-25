@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SessionManagerService } from 'src/app/auth/services/session-manager-service.service';
+import { TokenStorageService } from 'src/app/auth/services/token-storage.service';
+import { DesafiosDecorrerBreafService, IDesafiosDecorrerBreaf } from '../services/desafios-decorrer-breaf.service';
 
 @Component({
   selector: 'app-desafios-decorrer-breaf',
@@ -7,32 +11,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesafiosDecorrerBreafComponent implements OnInit {
 
-  desafios = []
-  constructor() { }
+  desafios: IDesafiosDecorrerBreaf[] = []
+  constructor(
+    private desafiosService: DesafiosDecorrerBreafService,
+    private sessionManager: SessionManagerService,
+    private token: TokenStorageService,
+    private router: Router,
+
+  ) { }
 
   ngOnInit(): void {
     this.getDesafios()
   }
 
   getDesafios() {
-    this.desafios =
-      this.desafios = [
-        {
-          nome: 'Desafio 1',
-          modalidade: 'Modalidade 1',
-          data: '01/01/2020',
-        },
-        {
-          nome: 'Desafio 1',
-          modalidade: 'Modalidade 1',
-          data: '01/01/2020',
-        },
-        {
-          nome: 'Desafio 1',
-          modalidade: 'Modalidade 1',
-          data: '01/01/2020',
-        },
-      ]
+    this.desafiosService.getDesafios().subscribe({
+      next: data => {
+
+        for (let desafio of data) {
+          desafio.data_fim = new Date(desafio.data_inicio).toLocaleString("pt-pt").replace(',', ' às')
+          this.desafios.push(desafio)
+        }
+      },
+      error: error => {
+
+        if (error.status == 401) {
+
+          this.sessionManager.getNewToken().subscribe({
+            next: data => {
+              this.token.saveToken(data.token)
+
+              this.getDesafios()
+            },
+            error: error => {
+              console.log(error)
+              this.router.navigate(['/login'])
+            }
+          })
+        }
+      }
+    })
   }
 
 }
