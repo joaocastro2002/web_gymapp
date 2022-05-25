@@ -60,6 +60,7 @@ import { CartoesComponent } from './treinador/ecra-alunos/cartoes/cartoes.compon
 import { FooterComponent } from './footer/footer.component';
 import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -116,7 +117,7 @@ import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-co
     PesquisaComponent,
     CartoesComponent,
     FooterComponent,
-    AgendarAvaliacaoComponentComponent,
+    AgendarAvaliacaoComponentComponent
   ],
   imports: [
     BrowserModule,

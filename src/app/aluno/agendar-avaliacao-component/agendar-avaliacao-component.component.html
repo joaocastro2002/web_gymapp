@@ -1,12 +1,26 @@
 <app-header></app-header>
 
 <div class="main">
-    <form [formGroup]="agendaForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="agendaForm" (ngSubmit)="onSubmit(mySelect)">
         <div class="row">
-            <input type="text" class="form-control" id="ginasioId" placeholder="Ginásio" formControlName="ginasioId" name="ginasioId">
+            <select name="my-select" class="drop" formControlName="ginasioId">
+                <option *ngFor="let item of nome" [ngValue]="item.ginasio_id">
+                    {{item.nome}}
+                </option>
+            </select>
         </div>
         <div class="row">
             <input type="datetime-local" class="form-control" id="dataAgendamento" placeholder="Data do agendamento" formControlName="dataAgendamento" name="dataAgendamento">
+        </div>
+        <!-- para mostrar uma mensagem em caso de sucesso ou erro -->
+        <div class="row alerta"  *ngIf="showMsg">
+            <div class="col-xs-12">
+              <p class="alert alert-success" [ngClass]="{'alert':true,
+              'alert-danger':error == true, 'alert-success': error == false}">
+                  <strong *ngIf="error; else success">{{errorMsg}}</strong>
+                  <ng-template #success><strong>Pedido de Agendamento realizado com sucesso!</strong></ng-template>
+              </p>
+            </div>
         </div>
         <div class="row linha-botao2">
             <button class="btn btn-primary botao2" type="submit">
