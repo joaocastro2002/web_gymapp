@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { LOCALE_ID } from '@angular/core';
+import ptPT from '@angular/common/locales/pt-PT';
+import { registerLocaleData } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -59,12 +62,9 @@ import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.compone
 import { PesquisaComponent } from './treinador/ecra-alunos/pesquisa/pesquisa.component';
 import { CartoesComponent } from './treinador/ecra-alunos/cartoes/cartoes.component';
 import { FooterComponent } from './footer/footer.component';
+import { PostComponent } from './post/post.component';
 
-
-
-
-
-
+registerLocaleData(ptPT)
 
 @NgModule({
   declarations: [
@@ -122,8 +122,7 @@ import { FooterComponent } from './footer/footer.component';
     PesquisaComponent,
     CartoesComponent,
     FooterComponent,
-
-
+    PostComponent,
   ],
   imports: [
     BrowserModule,
@@ -133,7 +132,7 @@ import { FooterComponent } from './footer/footer.component';
     Ng2SearchPipeModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'pt-PT' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
