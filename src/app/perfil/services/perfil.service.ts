@@ -26,6 +26,7 @@ export class PerfilService {
   getPerfilOutros(id: string) {
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + this.token.getToken()
-    return this.http.get<Perfil>(`${api_url}user/${id}`, {headers: headers})
+    //return this.http.get<Perfil>(`${api_url}user/${id}`, {headers: headers})
+  })
   }
 }

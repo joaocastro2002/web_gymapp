@@ -23,7 +23,6 @@ import { DadosAlunoAvaliacaoComponent } from './treinador/ver-avaliacao-fisica/d
 import { ButaoEditarAvaliacaoComponent } from './treinador/ver-avaliacao-fisica/butao-editar-avaliacao/butao-editar-avaliacao.component';
 import { MedidasVerAvaliacaoComponent } from './treinador/ver-avaliacao-fisica/medidas-ver-avaliacao/medidas-ver-avaliacao.component';
 import { CompararAvaliacaoFisicaComponent } from './aluno/comparar-avaliacao-fisica/comparar-avaliacao-fisica.component';
-import { DropdownCompararComponent } from './aluno/comparar-avaliacao-fisica/dropdown-comparar/dropdown-comparar.component';
 import { MedidasCompararAvaliacaoComponent } from './aluno/comparar-avaliacao-fisica/medidas-comparar-avaliacao/medidas-comparar-avaliacao.component';
 import { DadosCompararAvaliacaoComponent } from './aluno/comparar-avaliacao-fisica/dados-comparar-avaliacao/dados-comparar-avaliacao.component';
 import { DashboardTreinadorComponent } from './treinador/dashboard-treinador/dashboard-treinador.component';
@@ -86,7 +85,6 @@ import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-co
     ButaoEditarAvaliacaoComponent,
     MedidasVerAvaliacaoComponent,
     CompararAvaliacaoFisicaComponent,
-    DropdownCompararComponent,
     MedidasCompararAvaliacaoComponent,
     DadosCompararAvaliacaoComponent,
     DashboardTreinadorComponent,
@@ -127,11 +125,8 @@ import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-co
     PesquisaComponent,
     CartoesComponent,
     FooterComponent,
-
     PostComponent,
-
     AgendarAvaliacaoComponentComponent
-
   ],
   imports: [
     BrowserModule,
