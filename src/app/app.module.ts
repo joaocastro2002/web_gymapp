@@ -58,12 +58,7 @@ import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.compone
 import { PesquisaComponent } from './treinador/ecra-alunos/pesquisa/pesquisa.component';
 import { CartoesComponent } from './treinador/ecra-alunos/cartoes/cartoes.component';
 import { FooterComponent } from './footer/footer.component';
-
-
-
-
-
-
+import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
 
 @NgModule({
   declarations: [
@@ -121,8 +116,7 @@ import { FooterComponent } from './footer/footer.component';
     PesquisaComponent,
     CartoesComponent,
     FooterComponent,
-
-
+    AgendarAvaliacaoComponentComponent,
   ],
   imports: [
     BrowserModule,

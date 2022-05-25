@@ -16,6 +16,7 @@ import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisic
 import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-exercicio.component';
 import { CalendarioDesafioAvaliacaoComponent } from './calendario-desafio-avaliacao/calendario-desafio-avaliacao.component';
 import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.component';
+import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
 
 //Rotas para paginas
 const routes: Routes = [
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'calendarioDesafioAvaliacao', component: CalendarioDesafioAvaliacaoComponent },
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
   { path: 'treinador/alunos', component: EcraAlunosComponent },
+  { path: 'aluno/agendarAvaliacao', component: AgendarAvaliacaoComponentComponent }
 ];
 
 @NgModule({
