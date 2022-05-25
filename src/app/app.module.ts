@@ -59,7 +59,12 @@ import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.compone
 import { PesquisaComponent } from './treinador/ecra-alunos/pesquisa/pesquisa.component';
 import { CartoesComponent } from './treinador/ecra-alunos/cartoes/cartoes.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { AdminComponent } from './admin/admin.component';
+import { GerirMarcasComponent } from './admin/gerir-marcas/gerir-marcas.component';
+import { BotaoAdicionarMarcaComponent } from './admin/gerir-marcas/botao-adicionar-marca/botao-adicionar-marca.component';
+import { FiltrarMarcasComponent } from './admin/gerir-marcas/filtrar-marcas/filtrar-marcas.component';
+import { CardMarcasComponent } from './admin/gerir-marcas/card-marcas/card-marcas.component';
+import { ModalAdicionarMarcaComponent } from './admin/gerir-marcas/modal-adicionar-marca/modal-adicionar-marca.component';
 
 
 
@@ -122,6 +127,12 @@ import { FooterComponent } from './footer/footer.component';
     PesquisaComponent,
     CartoesComponent,
     FooterComponent,
+    AdminComponent,
+    GerirMarcasComponent,
+    BotaoAdicionarMarcaComponent,
+    FiltrarMarcasComponent,
+    CardMarcasComponent,
+    ModalAdicionarMarcaComponent,
 
 
   ],

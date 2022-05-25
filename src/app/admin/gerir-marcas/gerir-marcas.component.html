@@ -1,0 +1,20 @@
+<app-header></app-header>
+<main>
+    <div class="row col">
+        <div class="adicionar-marca col">
+            <app-botao-adicionar-marca></app-botao-adicionar-marca>
+        </div>
+        <div class="filtrar-marca col">
+            <app-filtrar-marcas></app-filtrar-marcas>
+        </div>
+    </div>
+    <div class="album py-5">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <app-card-marcas *ngFor="let m of marcas" [marca]="m"></app-card-marcas>
+          </div>
+        </div>
+    </div>
+</main>
+
+<app-footer></app-footer>

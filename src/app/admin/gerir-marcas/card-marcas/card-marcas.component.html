@@ -1,0 +1,38 @@
+<div class="col" id="marca{{marca.id}}" style="order: 2; display: block;" *ngIf="marca">
+    <div class="card" id="cartao{{marca.id}}">
+        <div class="info-marca">
+            <div class="marca-logo" id="marcaLogo{{marca.id}}" [ngStyle]="{'border-color': marca.cor}">
+                <img class="imagem-logo" src="{{marca.logo}}">
+            </div>
+            <div class="conteudo-marca">
+                <label class="nome-marca" id="nomeMarca{{marca.id}}" for="marcaLogo1">{{marca.nome}}</label>
+                <div class="div-mobilidade">
+                    <input id="inputMobilidade{{marca.id}}" type="checkbox" disabled="" value="{{marca.mobilidade}}" [checked]="marca.mobilidade">
+                    <label for="inputMobilidade{{marca.id}}" class="label-mobilidade">Mobilidade</label>
+                </div>
+            </div>
+        </div>
+        <div class="album py-3">
+            <div class="container">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                  <button class="col-auto" id="Ginásios{{marca.id}}">Ginásios</button>
+                  <button class="col-auto" id="Treinadores{{marca.id}}">Treinadores</button>
+                  <button class="col-auto" id="Publicações{{marca.id}}">Publicações</button>
+              </div>
+            </div>
+        </div>
+        <!-- <div class="botoes">
+            <ul>
+                <li>
+                    <button id="Ginásios{{marca.id}}">Ginásios</button>
+                </li>
+                <li>
+                    <button id="Treinadores{{marca.id}}">Treinadores</button>
+                </li>
+                <li>
+                    <button id="Publicações{{marca.id}}">Publicações</button>
+                </li>
+            </ul>
+        </div> -->
+    </div>
+</div>
