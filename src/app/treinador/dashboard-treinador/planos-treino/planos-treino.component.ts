@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SessionManagerService } from 'src/app/auth/services/session-manager-service.service';
 import { TokenStorageService } from 'src/app/auth/services/token-storage.service';
+import { DatasManagerService } from 'src/app/services/datas/datas-manager.service';
 import { IPlanosTreinoBreaf, VerPlanosTreinoBreafService } from '../services/ver-planos-treino-breaf.service';
 import { PlanosTreino } from './planosTreino';
 
@@ -17,7 +18,8 @@ export class PlanosTreinoComponent implements OnInit {
     private planosTreinoService: VerPlanosTreinoBreafService,
     private sessionManager: SessionManagerService,
     private token: TokenStorageService,
-    private router: Router
+    private router: Router,
+
   ) { }
 
 
@@ -28,9 +30,10 @@ export class PlanosTreinoComponent implements OnInit {
   getPlanosTreino() {
 
 
+
     this.planosTreinoService.getPlanosTreinoBreaf().subscribe({
       next: data => {
-        console.log(data)
+
         let planos = data
         for (let plano of planos) {
           let today = new Date();
