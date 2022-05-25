@@ -51,7 +51,6 @@ export class CriarMedidasComponent implements OnInit {
         unilado: false,
         nome: "Gémeo inferior"
       },
-
     ]
     for (let medida of this.medidas) {
       this.medidasFormControl[medida.nome] = new FormControl(null, Validators.required)

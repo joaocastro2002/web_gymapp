@@ -5,16 +5,29 @@
         <div class="col-auto col1">
             <h5 style="margin-left: 80px;">1ªData de avaliação:</h5>
             <div class="row drop">
-                <app-dropdown-comparar></app-dropdown-comparar>
+                <!-- vou ter um form para ir buscar as datas e ao carregar no onSubmit vou chamar um get para ir buscar os dados -->
+                <form [formGroup]="avaliacaoForm">
+                    <select name="my-select" class="drop" [(ngModel)]="mySelect" formControlName="avaliacao_id">
+                        <option *ngFor="let item of datasAval" [ngValue]="item.agendamentoId">
+                            {{item.data}}
+                        </option>
+                    </select>
+                </form>
             </div>
             <h5 style="margin-top: 20px; margin-left: 80px;">2ªData de avaliação:</h5>
             <div class="row drop">
-                <app-dropdown-comparar></app-dropdown-comparar>
+                <form [formGroup]="avaliacaoForm">
+                    <select name="my-select" class="drop" [(ngModel)]="mySelect" (change)="selectChange()">
+                        <option *ngFor="let item of datasAval" [ngValue]="item.agendamentoId">
+                            {{item.data}}
+                        </option>
+                    </select>
+                </form>
             </div>
             <div class="row comparar">
                 <button type="button" class="btn btn-lg" id="btn-comparar">Comparar</button>
             </div>
-        </div>
+        </div>  
         <div class="col-auto medidas">
             <app-medidas-comparar-avaliacao></app-medidas-comparar-avaliacao>
         </div>

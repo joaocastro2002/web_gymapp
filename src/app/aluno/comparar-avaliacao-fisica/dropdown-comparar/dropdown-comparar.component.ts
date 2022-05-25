@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DropdownCompararService } from '../services/dropdown-comparar.service';
-import { DropCompararService } from 'src/app/aluno/comparar-avaliacao-fisica/dropdown-comparar/services/drop-comparar.service';
+import { DropCompararService } from 'src/app/aluno/comparar-avaliacao-fisica/services/drop-comparar.service';
 import { SessionManagerService } from 'src/app/auth/services/session-manager-service.service';
 import { TokenStorageService } from 'src/app/auth/services/token-storage.service';
 import { Router } from '@angular/router';
