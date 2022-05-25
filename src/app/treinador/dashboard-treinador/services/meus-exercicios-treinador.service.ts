@@ -4,6 +4,7 @@ import { TokenStorageService } from 'src/app/auth/services/token-storage.service
 import { catchError, Observable, of } from 'rxjs';
 
 import { SessionManagerService } from 'src/app/auth/services/session-manager-service.service';
+import { Router } from '@angular/router';
 
 const api_url = "http://localhost:2900/"
 
@@ -32,7 +33,8 @@ export class MeusExerciciosTreinadorService {
   constructor(
     private http: HttpClient,
     private token: TokenStorageService,
-    private sessionManager: SessionManagerService) { }
+    private sessionManager: SessionManagerService,
+    private router: Router) { }
   getExercicios(): Observable<Array<IMeusExerciciosTreinador>> {
     const token = this.token.getToken()
     if (token == null) {
@@ -41,6 +43,9 @@ export class MeusExerciciosTreinadorService {
           this.token.saveToken(data.token)
 
           return this.getExercicios()
+        },
+        error: error => {
+          this.router.navigate(['/login'])
         }
       })
     } else {
