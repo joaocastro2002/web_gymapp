@@ -1,24 +1,10 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { TokenStorageService } from 'src/app/auth/services/token-storage.service';
+import { Treino } from 'src/app/models/treino.model';
 
-const api_url = "http://localhost:8000/api/v1/"
+const api_url = "http://localhost:2900/"
 
-interface resTreino {
-  "treinos": [
-    {
-      "treino_id": string,
-      "uid": string,
-      "atividade_id"? : string,
-      "modalidade_id": string,
-      "duracao": string,
-      "calorias": number,
-      "distancia": number,
-      "data": Date,
-      "isDeleted": boolean
-    }
-  ]
-}
 
 @Injectable({
   providedIn: 'root'
@@ -32,11 +18,11 @@ export class PlanoTreinoService {
 
   
 
-  getTreinos(userId: string){
+  getTreinos(){
     const headers = new HttpHeaders({
       'Authorization':'Bearer ' + this.token.getToken()
     })
     
-    return this.http.get<resTreino>(`${api_url}aluno/${userId}/treinos/`, {headers: headers})
+    return this.http.get<Treino>(`${api_url}aluno/treinos/`, {headers: headers})
   }
 }
