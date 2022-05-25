@@ -17,11 +17,11 @@ export class PerfilOutrosComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.perfilService.getPerfilOutros(this.route.snapshot.paramMap.get('id')).subscribe(data => {
-      this.userInfo = data
+    // this.perfilService.getPerfilOutros(this.route.snapshot.paramMap.get('id')).subscribe(data => {
+    //   this.userInfo = data
 
-      console.log(data)
-    })
+    //   console.log(data)
+    // })
   }
 
   modalPub(pub:any){

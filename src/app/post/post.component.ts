@@ -73,10 +73,10 @@ export class PostComponent implements OnInit, AfterViewInit {
       for (let i = 0; i < Object.keys(data).length; i++) {
         this.postService.getInfoOfPost(data[i].publicacao_id).subscribe(infoPost => {
           if (!isEmpty(infoPost)) {
-            this.perfilService.getPerfilOutros(infoPost.criador_id).subscribe(criador => {
-              infoPost.criador_nome = criador.perfil[0].nome
-              this.arrayPosts.push(infoPost)
-            })
+            // this.perfilService.getPerfilOutros(infoPost.criador_id).subscribe(criador => {
+            //   infoPost.criador_nome = criador.perfil[0].nome
+            //   this.arrayPosts.push(infoPost)
+            // })
             console.log(infoPost)
           }
         })

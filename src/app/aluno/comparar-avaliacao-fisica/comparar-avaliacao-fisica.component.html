@@ -3,33 +3,32 @@
 <div class="main">
     <div class="row row1">
         <div class="col-auto col1">
-            <h5 style="margin-left: 80px;">1ªData de avaliação:</h5>
+            <!-- vou ter um form para ir buscar as datas e ao carregar no onSubmit vou chamar um get para ir buscar os dados -->
+            <form [formGroup]="avaliacaoForm" (ngSubmit)="onSubmit(mySelect)">
+                <h5 style="margin-left: 80px;">1ªData de avaliação:</h5>
             <div class="row drop">
-                <!-- vou ter um form para ir buscar as datas e ao carregar no onSubmit vou chamar um get para ir buscar os dados -->
-                <form [formGroup]="avaliacaoForm">
-                    <select name="my-select" class="drop" [(ngModel)]="mySelect" formControlName="avaliacao_id">
-                        <option *ngFor="let item of datasAval" [ngValue]="item.agendamentoId">
+                    <!-- no dropdown vou buscar as datas ao array - a cada data vai estar associado um id - vai ser preciso para ir buscar os restantes dados -->
+                    <select name="my-select" class="drop" [(ngModel)]="mySelect" formControlName="avaliacao_id_0">
+                        <option *ngFor="let item of datasAval" [ngValue]="item.avaliacao_id">
                             {{item.data}}
                         </option>
                     </select>
-                </form>
             </div>
             <h5 style="margin-top: 20px; margin-left: 80px;">2ªData de avaliação:</h5>
             <div class="row drop">
-                <form [formGroup]="avaliacaoForm">
-                    <select name="my-select" class="drop" [(ngModel)]="mySelect" (change)="selectChange()">
-                        <option *ngFor="let item of datasAval" [ngValue]="item.agendamentoId">
+                    <select name="my-select" class="drop" [(ngModel)]="mySelect" formControlName="avaliacao_id_1">
+                        <option *ngFor="let item of datasAval" [ngValue]="item.avaliacao_id">
                             {{item.data}}
                         </option>
                     </select>
-                </form>
             </div>
             <div class="row comparar">
-                <button type="button" class="btn btn-lg" id="btn-comparar">Comparar</button>
+                <button type="submit" class="btn btn-lg" id="btn-comparar">Comparar</button>
             </div>
+            </form>
         </div>  
         <div class="col-auto medidas">
-            <app-medidas-comparar-avaliacao></app-medidas-comparar-avaliacao>
+            <app-medidas-comparar-avaliacao [avaliacao]="avaliacao0"></app-medidas-comparar-avaliacao>
         </div>
         <div class="col-auto medidas">
             <app-medidas-comparar-avaliacao2></app-medidas-comparar-avaliacao2>

@@ -28,12 +28,11 @@ export interface ICompararAvaliacaoService {
     {
       medida: string,
       unidade_medida: string,
-      locais_medidas: Array <
+      locais_medidas: 
         {
-          descricao: PieAnimationOptions,
+          descricao: string,
           unilado: boolean
         }
-      >
     }
   >
 }
@@ -51,14 +50,14 @@ export class CompararAvaliacaoService {
   ) { }
   
   // vamos fazer um pedido à API para ir buscar os dados todos indicados na interface em cima
-  getDadosAvaliacao(): Observable<Array<ICompararAvaliacaoService>> {
+  getDadosAvaliacao(avaliacao_id: string): Observable<ICompararAvaliacaoService> {
     const token = this.token.getToken()
     if (token == null) {
       this.sessionManager.getNewToken().subscribe({
         next: data => {
           this.token.saveToken(data.token)
 
-          return this.getDadosAvaliacao()
+          return this.getDadosAvaliacao(avaliacao_id)
         },
         error: error => {
           this.router.navigate(['/login'])
@@ -72,7 +71,8 @@ export class CompararAvaliacaoService {
         'Authorization': 'Bearer ' + this.token.getToken()
       })
 
-      return this.http.get<Array<ICompararAvaliacaoService>>(`http://localhost:2900/aluno/avaliacoes/`, { headers: headers })
+      
+      return this.http.get<ICompararAvaliacaoService>(`http://localhost:2900/aluno/avaliacao/${avaliacao_id}`, { headers: headers })
     }
   }
 }
