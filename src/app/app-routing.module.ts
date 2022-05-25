@@ -16,7 +16,11 @@ import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisic
 import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-exercicio.component';
 import { CalendarioDesafioAvaliacaoComponent } from './calendario-desafio-avaliacao/calendario-desafio-avaliacao.component';
 import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.component';
+
+import { PostComponent } from './post/post.component';
+
 import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
+
 
 //Rotas para paginas
 const routes: Routes = [
@@ -26,6 +30,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
   { path: 'verPublicacao', component: VerPublicacaoComponent },
+  { path: 'post', component: PostComponent },
   { path: 'treinador/verAvaliacao', component: VerAvaliacaoFisicaComponent },
   { path: 'aluno/compararAvaliacao', component: CompararAvaliacaoFisicaComponent },
   { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
@@ -37,7 +42,9 @@ const routes: Routes = [
   { path: 'calendarioDesafioAvaliacao', component: CalendarioDesafioAvaliacaoComponent },
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
   { path: 'treinador/alunos', component: EcraAlunosComponent },
-  { path: 'aluno/agendarAvaliacao', component: AgendarAvaliacaoComponentComponent }
+  { path: 'aluno/agendarAvaliacao', component: AgendarAvaliacaoComponentComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', component: DashboardComponent }
 ];
 
 @NgModule({
