@@ -26,7 +26,7 @@ export class DropdownCompararComponent implements OnInit {
     private router: Router
   ) { }
 
-  // ao iniciar vamos ter esta função
+  // ao iniciar vamos ter esta função para ir buscar os dados
   ngOnInit(): void {
     this.getData()
   }

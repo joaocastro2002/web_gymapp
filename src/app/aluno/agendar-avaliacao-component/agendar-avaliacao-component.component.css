@@ -15,3 +15,12 @@
     height: 40px;
     width: 30%;
 }
+
+.drop {
+    border-radius: 20px;
+    height: 35px;
+}
+
+.alerta{
+    width: 50%;
+}
