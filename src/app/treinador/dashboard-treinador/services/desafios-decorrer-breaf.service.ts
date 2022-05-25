@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { TokenStorageService } from 'src/app/auth/services/token-storage.service';
 import { SessionManagerService } from 'src/app/auth/services/session-manager-service.service';
+import { Router } from '@angular/router';
 
 const api_url = "http://localhost:2900/"
 
@@ -15,7 +16,8 @@ export class DesafiosDecorrerBreafService {
   constructor(
     private http: HttpClient,
     private token: TokenStorageService,
-    private sessionManager: SessionManagerService) { }
+    private sessionManager: SessionManagerService,
+    private router: Router) { }
   getDesafios() {
     const token = this.token.getToken()
     if (token == null) {
@@ -24,6 +26,9 @@ export class DesafiosDecorrerBreafService {
           this.token.saveToken(data.token)
 
           return this.getDesafios()
+        },
+        error: error => {
+          this.router.navigate(['/login'])
         }
       })
     } else {
