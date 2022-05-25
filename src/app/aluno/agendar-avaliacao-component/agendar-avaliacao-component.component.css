@@ -1,0 +1,26 @@
+.row{
+    width: 50%;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+
+.botao2 {
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 70px;
+    color: white;
+    background-color: #ff5050;
+    border-radius: 1.2rem;
+    border-color: #ff5050;
+    height: 40px;
+    width: 30%;
+}
+
+.drop {
+    border-radius: 20px;
+    height: 35px;
+}
+
+.alerta{
+    width: 50%;
+}

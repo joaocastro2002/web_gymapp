@@ -14,12 +14,12 @@ export class TreinosService {
     private http: HttpClient,
     private token: TokenStorageService) { }
 
-  getTreinos(){
+  getTreinos() {
     const headers = new HttpHeaders({
-      'Authorization':'Bearer ' + this.token.getToken()
+      'Authorization': 'Bearer ' + this.token.getToken()
     })
-    return this.http.get(`${api_url}aluno/treinos/`, {headers: headers})
+    return this.http.get(`${api_url}aluno/treinos/`, { headers: headers })
   }
 
-  
+
 }

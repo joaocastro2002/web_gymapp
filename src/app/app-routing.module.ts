@@ -16,7 +16,11 @@ import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisic
 import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-exercicio.component';
 import { CalendarioDesafioAvaliacaoComponent } from './calendario-desafio-avaliacao/calendario-desafio-avaliacao.component';
 import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.component';
+
 import { PostComponent } from './post/post.component';
+
+import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
+
 
 //Rotas para paginas
 const routes: Routes = [
@@ -28,18 +32,19 @@ const routes: Routes = [
   { path: 'verPublicacao', component: VerPublicacaoComponent },
   { path: 'post', component: PostComponent },
   { path: 'treinador/verAvaliacao', component: VerAvaliacaoFisicaComponent },
-  { path: 'treinador/compararAvaliacao', component: CompararAvaliacaoFisicaComponent },
+  { path: 'aluno/compararAvaliacao', component: CompararAvaliacaoFisicaComponent },
   { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
   { path: 'notificacoes', component: NotificacoesComponent },
-  { path: 'treinador/verAvaliacaoDias', component: VerAvaliacoesDiasComponent },
+  { path: 'aluno/verAvaliacaoDias', component: VerAvaliacoesDiasComponent },
   { path: 'treinador/criarAvaliacao', component: CriarAvaliacaoFisicaComponent },
   { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
   { path: 'calendarioDesafioAvaliacao', component: CalendarioDesafioAvaliacaoComponent },
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
   { path: 'treinador/alunos', component: EcraAlunosComponent },
+  { path: 'aluno/agendarAvaliacao', component: AgendarAvaliacaoComponentComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: '**', component: DashboardComponent },
+  { path: '**', component: DashboardComponent }
 ];
 
 @NgModule({

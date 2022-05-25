@@ -16,17 +16,16 @@ export class PerfilService {
     private http: HttpClient,
     private token: TokenStorageService) { }
 
-  getPerfil(){
+  getPerfil() {
     const headers = new HttpHeaders({
-      'Authorization':'Bearer ' + this.token.getToken()
+      'Authorization': 'Bearer ' + this.token.getToken()
     })
     return this.http.get<MyPerfil>(`${api_url}perfil`, {headers: headers})
   }
 
-  getPerfilOutros(id : string){
+  getPerfilOutros(id: string) {
     const headers = new HttpHeaders({
-      'Authorization':'Bearer ' + this.token.getToken()
-    })
+      'Authorization': 'Bearer ' + this.token.getToken()
     return this.http.get<Perfil>(`${api_url}user/${id}`, {headers: headers})
   }
 }

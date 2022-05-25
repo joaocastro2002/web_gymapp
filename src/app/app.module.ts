@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { LOCALE_ID } from '@angular/core';
 import ptPT from '@angular/common/locales/pt-PT';
 import { registerLocaleData } from '@angular/common';
+
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -62,9 +64,12 @@ import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.compone
 import { PesquisaComponent } from './treinador/ecra-alunos/pesquisa/pesquisa.component';
 import { CartoesComponent } from './treinador/ecra-alunos/cartoes/cartoes.component';
 import { FooterComponent } from './footer/footer.component';
+
 import { PostComponent } from './post/post.component';
 
 registerLocaleData(ptPT)
+
+import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
 
 @NgModule({
   declarations: [
@@ -122,14 +127,17 @@ registerLocaleData(ptPT)
     PesquisaComponent,
     CartoesComponent,
     FooterComponent,
+
     PostComponent,
+
+    AgendarAvaliacaoComponentComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    Ng2SearchPipeModule,
     HttpClientModule,
   ],
   providers: [{provide: LOCALE_ID, useValue: 'pt-PT' }],
