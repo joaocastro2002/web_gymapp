@@ -16,17 +16,27 @@ import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisic
 import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-exercicio.component';
 import { CalendarioDesafioAvaliacaoComponent } from './calendario-desafio-avaliacao/calendario-desafio-avaliacao.component';
 import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.component';
+import { PostComponent } from './post/post.component';
 import { GerirMarcasComponent } from './admin/gerir-marcas/gerir-marcas.component';
 import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
+import { RoleGuardService } from './auth/services/role-guard.service';
+import { AuthGuardService } from './auth/services/auth-guard.service';
+
 
 //Rotas para paginas
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'perfil', component: PerfilComponent },
-  { path: 'perfil/:id', component: PerfilOutrosComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'perfil', component: PerfilComponent, canActivate: [AuthGuardService] },
+  { path: 'perfil/:id', component: PerfilOutrosComponent, canActivate: [AuthGuardService]},
+  {
+    path: 'dashboard', component: DashboardComponent, canActivate: [RoleGuardService],
+    data: {
+      expectedRole: 'Aluno'
+    }
+  },
   { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
   { path: 'verPublicacao', component: VerPublicacaoComponent },
+  { path: 'post', component: PostComponent },
   { path: 'treinador/verAvaliacao', component: VerAvaliacaoFisicaComponent },
   { path: 'aluno/compararAvaliacao', component: CompararAvaliacaoFisicaComponent },
   { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
@@ -38,8 +48,10 @@ const routes: Routes = [
   { path: 'calendarioDesafioAvaliacao', component: CalendarioDesafioAvaliacaoComponent },
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
   { path: 'treinador/alunos', component: EcraAlunosComponent },
+  { path: 'aluno/agendarAvaliacao', component: AgendarAvaliacaoComponentComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'admin/gerirMarcas', component: GerirMarcasComponent },
-  { path: 'aluno/agendarAvaliacao', component: AgendarAvaliacaoComponentComponent }
+  { path: '**', component: DashboardComponent }
 ];
 
 @NgModule({

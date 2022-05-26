@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { LOCALE_ID } from '@angular/core';
+import ptPT from '@angular/common/locales/pt-PT';
+import { registerLocaleData } from '@angular/common';
+
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './auth/login/login.component';
@@ -17,7 +23,6 @@ import { DadosAlunoAvaliacaoComponent } from './treinador/ver-avaliacao-fisica/d
 import { ButaoEditarAvaliacaoComponent } from './treinador/ver-avaliacao-fisica/butao-editar-avaliacao/butao-editar-avaliacao.component';
 import { MedidasVerAvaliacaoComponent } from './treinador/ver-avaliacao-fisica/medidas-ver-avaliacao/medidas-ver-avaliacao.component';
 import { CompararAvaliacaoFisicaComponent } from './aluno/comparar-avaliacao-fisica/comparar-avaliacao-fisica.component';
-import { DropdownCompararComponent } from './aluno/comparar-avaliacao-fisica/dropdown-comparar/dropdown-comparar.component';
 import { MedidasCompararAvaliacaoComponent } from './aluno/comparar-avaliacao-fisica/medidas-comparar-avaliacao/medidas-comparar-avaliacao.component';
 import { DadosCompararAvaliacaoComponent } from './aluno/comparar-avaliacao-fisica/dados-comparar-avaliacao/dados-comparar-avaliacao.component';
 import { DashboardTreinadorComponent } from './treinador/dashboard-treinador/dashboard-treinador.component';
@@ -65,7 +70,11 @@ import { FiltrarMarcasComponent } from './admin/gerir-marcas/filtrar-marcas/filt
 import { CardMarcasComponent } from './admin/gerir-marcas/card-marcas/card-marcas.component';
 import { ModalAdicionarMarcaComponent } from './admin/gerir-marcas/modal-adicionar-marca/modal-adicionar-marca.component';
 import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
+import { PostComponent } from './post/post.component';
 
+registerLocaleData(ptPT)
+
+import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +91,6 @@ import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-co
     ButaoEditarAvaliacaoComponent,
     MedidasVerAvaliacaoComponent,
     CompararAvaliacaoFisicaComponent,
-    DropdownCompararComponent,
     MedidasCompararAvaliacaoComponent,
     DadosCompararAvaliacaoComponent,
     DashboardTreinadorComponent,
@@ -123,6 +131,7 @@ import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-co
     PesquisaComponent,
     CartoesComponent,
     FooterComponent,
+    PostComponent,
     AdminComponent,
     GerirMarcasComponent,
     BotaoAdicionarMarcaComponent,
@@ -138,7 +147,7 @@ import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-co
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'pt-PT' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

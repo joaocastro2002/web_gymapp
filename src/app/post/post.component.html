@@ -1,0 +1,287 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-9 mt-2" *ngFor="let pub of arrayPosts; let arrayIndex = index">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mt-2">
+                            <div class="mx-2 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="bi bi-person-circle mx-2" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                                <a class="text-decoration-none link-dark" href="./perfilMarta.html">
+                                    <span class="card-title text-center textMiddle fs-5 textColor mx-2"><b>
+                                            {{pub.criador_nome}} </b> </span></a>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8 mt-5">
+
+                                    <div class="col-md-12 backGroundImage borderImg">
+
+
+                                        <div id="carouselExampleControls" class="carousel slide"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item"
+                                                    *ngFor="let image of pub.imagens_publicacao;let index = index;let isFirst = first"
+                                                    [ngClass]="{active:isFirst}">
+                                                    <img [src]="image.url" class="d-block w-100" [alt]="image">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                        <!--     <div id="carouselExampleDark" class="carousel carousel-dark"
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#carouselExampleDark"
+                                                    data-bs-slide-to="0" class="active" aria-current="true"
+                                                    aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#carouselExampleDark"
+                                                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+                                            </div>
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active" *ngFor="let image of pub.imagens_publicacao">
+                                                    <img [src]="" height="300" width="300"
+                                                        class="d-block w-100" alt="...">
+
+                                                </div>
+
+
+                                            </div>
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div> -->
+                                    </div>
+
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <div class="card-body card-scroll" style="height: 300px;">
+                                <div class="row">
+                                    <div class="row mt-1"
+                                        *ngFor="let coments of pub.comentarios_publicacao; let i = index">
+                                        <div class="col-md-12">
+                                            <div class="card">
+                                                <div class="card-body " style="padding-bottom: 0px; ">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="35"
+                                                                height="35" fill="currentColor"
+                                                                class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                                                <path fill-rule="evenodd"
+                                                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                                            </svg>
+                                                            <a class="text-decoration-none link-dark"
+                                                                href="./perfil.html">
+                                                                <span
+                                                                    class="card-title textMiddle fs-6 textColor mx-2"><b>{{coments.users.nome}}</b></span></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-2">
+                                                        <p class="fontComentarios lh-1">{{coments.comentario}}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body fontComentarios text-muted"
+                                                    style="padding-top: 0px;">
+                                                    <span>Há 30 minutos</span>
+                                                    <div class="float-end">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="#FF5050" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd"
+                                                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                        </svg>
+                                                        <span class="link-dark textMiddle"> 75 Gostos</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-left: auto;">
+                        <div class="card-body fontComentarios text-muted" style="padding-top: 0px;">
+                            <div class="">
+                                <a (click)="likePost(pub.publicacao_id, arrayIndex)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FF5050"
+                                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <span class="link-dark textMiddle lh-sm"> {{pub._count.gostos_publicacao}}</span>
+                            </div>
+                        </div>
+                        <p class="text-muted" style="padding-top:0px;">
+                            {{pub.descricao}}
+                        </p>
+                        <div class="card-body fontComentarios text-muted" style="padding-top: 0px;">
+                            <span>{{pub.data | date: 'fullDate'}}</span>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-11">
+                            <div class="mb-3">
+                                <input type="text" [(ngModel)]="pubcomment" class="form-control comment"
+                                    id="exampleInputEmail1" aria-describedby="emailHelp"
+                                    placeholder="Adicionar um comentário">
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary btn-Red"
+                                (click)="commentPost(pub.publicacao_id,arrayIndex)"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-send-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
+                                </svg></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 fixed-top mt-5" style="margin-left: auto;">
+           
+
+            <div class="row">
+                <div class="col-md-12 mt-3">
+                    <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                            <h6 class="card-title text-center">Notificações</h6>
+                            <div class="row card-scroll" style="height: 250px;">
+                                <div class="row mt-1">
+                                    <div class="col-md-12" style="padding-right: 0px;">
+                                        <div class="card-body" style="padding-top: 11px;">
+                                            <div class="row h-210px">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <div class="col-md-2"> <span style="width:50%">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                        height="20" fill="currentColor"
+                                                                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                                                        <path fill-rule="evenodd"
+                                                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                                                    </svg>
+                                                                </span></div>
+                                                            <div class="col-md-10 font">Tem um novo <b>pedido de
+                                                                    amizade</b>.</div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <div class="col-md-2"> <span>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" fill="#FF5050"
+                                                                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                                        <path fill-rule="evenodd"
+                                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z">
+                                                                        </path>
+                                                                    </svg>
+                                                                </span></div>
+                                                            <div class="col-md-10 font"> <span><a
+                                                                        class="text-decoration-none link-dark"
+                                                                        href="./perfilMarta.html"><b>Marta Lopes da
+                                                                            Silva</b></a> gostou da sua
+                                                                    publicação.</span></div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <div class="col-md-2"> <span style="width:50%">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                        height="20" fill="currentColor"
+                                                                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                                                        <path fill-rule="evenodd"
+                                                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                                                    </svg>
+                                                                </span></div>
+                                                            <div class="col-md-10 font">Tem um novo <b>pedido de
+                                                                    amizade</b>.</div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <div class="col-md-2"> <span>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" fill="#FF5050"
+                                                                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                                        <path fill-rule="evenodd"
+                                                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z">
+                                                                        </path>
+                                                                    </svg>
+                                                                </span></div>
+                                                            <div class="col-md-10 font"> <span><a
+                                                                        class="text-decoration-none link-dark"
+                                                                        href="./perfilMarta.html"><b>Marta Lopes da
+                                                                            Silva</b></a> comentou a sua
+                                                                    publicação.</span></div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="list-group-item">
+                                                        <div class="row">
+                                                            <div class="col-md-2"> <span style="width:50%">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                        height="20" fill="currentColor"
+                                                                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                                                        <path fill-rule="evenodd"
+                                                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                                                    </svg>
+                                                                </span></div>
+                                                            <div class="col-md-10 font">Tem um novo <b>pedido de
+                                                                    amizade</b>.</div>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

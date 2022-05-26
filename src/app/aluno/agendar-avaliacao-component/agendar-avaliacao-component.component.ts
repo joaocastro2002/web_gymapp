@@ -103,13 +103,30 @@ export class AgendarAvaliacaoComponentComponent implements OnInit {
         this.error = false;
         this.showMsg = true;
       }, error: erro => {
-        this.showMsg = true;
-        this.errorMsg = erro.error;
-        console.error(erro.error)
-        this.error = true;
+
+        // se a minha sessão já não for válida manda para o login
+        if (erro.status == 401) {
+
+          this.sessionManager.getNewToken().subscribe({
+            next: data => {
+              this.token.saveToken(data.token)
+
+              this.onSubmit(mySelect)
+            },
+            error: error => {
+              console.log(error)
+              this.router.navigate(['/login'])
+            }
+          })
+        }
+        // caso seja erro 500
+        else{
+          this.showMsg = true;
+          this.errorMsg = erro.error;
+          console.error(erro.error)
+          this.error = true;
+        }
       }
     });
   }
-  
-
 }

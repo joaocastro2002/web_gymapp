@@ -79,3 +79,28 @@ footer p{
     margin-top: 10px;
     margin-bottom: 0px;
 }
+
+.drop{
+    margin-top: 20px; 
+    border-radius: 1rem;
+    width: 160%;
+    /* height: 70%; */
+}
+.select{
+    margin-top: 20px;
+}
+
+.con2{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding: 0px;
+    height: 200px;
+}
+
+.con2 .scroll{
+    width: 350px;
+}
