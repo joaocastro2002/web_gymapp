@@ -40,6 +40,7 @@ export class DropGinasiosService {
         'Authorization': 'Bearer ' + this.token.getToken()
       })
 
+      // vamos a esta rota buscar os ginasios a que o aluno pertence
       return this.http.get<Array<any>>(`${api_url}aluno/ginasios`, { headers: headers })
     }
   }
