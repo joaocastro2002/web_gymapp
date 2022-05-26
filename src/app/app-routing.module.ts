@@ -16,9 +16,8 @@ import { CriarAvaliacaoFisicaComponent } from './treinador/criar-avaliacao-fisic
 import { GestaoExercicioComponent } from './treinador/gestao-exercicio/gestao-exercicio.component';
 import { CalendarioDesafioAvaliacaoComponent } from './calendario-desafio-avaliacao/calendario-desafio-avaliacao.component';
 import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.component';
-
 import { PostComponent } from './post/post.component';
-
+import { GerirMarcasComponent } from './admin/gerir-marcas/gerir-marcas.component';
 import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
 import { RoleGuardService } from './auth/services/role-guard.service';
 import { AuthGuardService } from './auth/services/auth-guard.service';
@@ -43,9 +42,10 @@ const routes: Routes = [
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
   { path: 'calendarioDesafioAvaliacao', component: CalendarioDesafioAvaliacaoComponent },
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
-  { path: 'treinador/alunos', component: EcraAlunosComponent },
+  { path: 'alunos/ginasio/:id', component: EcraAlunosComponent },
   { path: 'aluno/agendarAvaliacao', component: AgendarAvaliacaoComponentComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'admin/gerirMarcas', component: GerirMarcasComponent },
   { path: '**', component: DashboardComponent }
 ];
 
