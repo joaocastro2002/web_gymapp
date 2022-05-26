@@ -11,7 +11,7 @@ export class CardMarcasComponent implements OnInit {
   constructor() { 
   }
 
-  @Input() marca?: Marca;
+  @Input() marcas?: Marca[];
 
   ngOnInit(): void {
   }
