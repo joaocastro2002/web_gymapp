@@ -63,7 +63,13 @@ import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.compone
 import { PesquisaComponent } from './treinador/ecra-alunos/pesquisa/pesquisa.component';
 import { CartoesComponent } from './treinador/ecra-alunos/cartoes/cartoes.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { AdminComponent } from './admin/admin.component';
+import { GerirMarcasComponent } from './admin/gerir-marcas/gerir-marcas.component';
+import { BotaoAdicionarMarcaComponent } from './admin/gerir-marcas/botao-adicionar-marca/botao-adicionar-marca.component';
+import { FiltrarMarcasComponent } from './admin/gerir-marcas/filtrar-marcas/filtrar-marcas.component';
+import { CardMarcasComponent } from './admin/gerir-marcas/card-marcas/card-marcas.component';
+import { ModalAdicionarMarcaComponent } from './admin/gerir-marcas/modal-adicionar-marca/modal-adicionar-marca.component';
+import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
 import { PostComponent } from './post/post.component';
 
 registerLocaleData(ptPT)
@@ -126,6 +132,12 @@ import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-co
     CartoesComponent,
     FooterComponent,
     PostComponent,
+    AdminComponent,
+    GerirMarcasComponent,
+    BotaoAdicionarMarcaComponent,
+    FiltrarMarcasComponent,
+    CardMarcasComponent,
+    ModalAdicionarMarcaComponent,
     AgendarAvaliacaoComponentComponent
   ],
   imports: [
