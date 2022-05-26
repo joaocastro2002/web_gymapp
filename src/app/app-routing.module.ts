@@ -47,7 +47,7 @@ const routes: Routes = [
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
   { path: 'calendarioDesafioAvaliacao', component: CalendarioDesafioAvaliacaoComponent },
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
-  { path: 'treinador/alunos', component: EcraAlunosComponent },
+  { path: 'alunos/ginasio/:id', component: EcraAlunosComponent },
   { path: 'aluno/agendarAvaliacao', component: AgendarAvaliacaoComponentComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'admin/gerirMarcas', component: GerirMarcasComponent },
