@@ -69,7 +69,6 @@ import { BotaoAdicionarMarcaComponent } from './admin/gerir-marcas/botao-adicion
 import { FiltrarMarcasComponent } from './admin/gerir-marcas/filtrar-marcas/filtrar-marcas.component';
 import { CardMarcasComponent } from './admin/gerir-marcas/card-marcas/card-marcas.component';
 import { ModalAdicionarMarcaComponent } from './admin/gerir-marcas/modal-adicionar-marca/modal-adicionar-marca.component';
-import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
 import { PostComponent } from './post/post.component';
 
 registerLocaleData(ptPT)
