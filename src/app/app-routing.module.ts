@@ -20,14 +20,21 @@ import { EcraAlunosComponent } from './treinador/ecra-alunos/ecra-alunos.compone
 import { PostComponent } from './post/post.component';
 
 import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
+import { RoleGuardService } from './auth/services/role-guard.service';
+import { AuthGuardService } from './auth/services/auth-guard.service';
 
 
 //Rotas para paginas
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'perfil', component: PerfilComponent },
-  { path: 'perfil/:id', component: PerfilOutrosComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'perfil', component: PerfilComponent, canActivate: [AuthGuardService] },
+  { path: 'perfil/:id', component: PerfilOutrosComponent, canActivate: [AuthGuardService]},
+  {
+    path: 'dashboard', component: DashboardComponent, canActivate: [RoleGuardService],
+    data: {
+      expectedRole: 'Aluno'
+    }
+  },
   { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
   { path: 'verPublicacao', component: VerPublicacaoComponent },
   { path: 'post', component: PostComponent },
