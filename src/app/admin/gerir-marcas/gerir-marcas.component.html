@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="mainPage">
+    <div class="row">
+        <div class="adicionar-marca col">
+            <app-botao-adicionar-marca></app-botao-adicionar-marca>
+        </div>
+        <div class="filtrar-marca col">
+            <app-filtrar-marcas></app-filtrar-marcas>
+        </div>
+    </div>
+    <div class="album py-5">
+        <div class="container">
+            <app-card-marcas [marcas]="marcas"></app-card-marcas>
+            <!-- <div class="card">
+                <div class="card-body col-auto scroll flex-nowrap">
+                    <div class="card-body">
+                        <div class="col-auto">
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                <app-card-marcas *ngFor="let m of marcas" [marca]="m"></app-card-marcas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

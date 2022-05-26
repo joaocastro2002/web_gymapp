@@ -1,0 +1,19 @@
+/* .filtrar-marca {
+    float: right;
+    margin: 5px !important;
+}*/
+
+.filtro {
+    margin-right: 50px;
+    margin-bottom: 0px;
+  }
+  
+  .filtro.row {
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .filtro p {
+    margin: 0px;
+  }
