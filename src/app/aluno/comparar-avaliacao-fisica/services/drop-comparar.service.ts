@@ -9,6 +9,7 @@ export class DropCompararService {
   constructor() { }
 
   getDropDownText(id, object){
+    // filtrar a quantidade d eobjetos com aquele id e ver aquele que selecionamos
     const selObj = _.filter(object, function (o) {
         return (_.includes(id,o.id));
     });

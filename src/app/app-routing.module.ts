@@ -28,12 +28,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'perfil', component: PerfilComponent, canActivate: [AuthGuardService] },
   { path: 'perfil/:id', component: PerfilOutrosComponent, canActivate: [AuthGuardService]},
-  {
-    path: 'dashboard', component: DashboardComponent, canActivate: [RoleGuardService],
-    data: {
-      expectedRole: 'Aluno'
-    }
-  },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'dashboardTreinador', component: DashboardTreinadorComponent },
   { path: 'verPublicacao', component: VerPublicacaoComponent },
   { path: 'post', component: PostComponent },
@@ -47,7 +42,7 @@ const routes: Routes = [
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
   { path: 'calendarioDesafioAvaliacao', component: CalendarioDesafioAvaliacaoComponent },
   { path: 'treinador/gestaoExercicio', component: GestaoExercicioComponent },
-  { path: 'treinador/alunos', component: EcraAlunosComponent },
+  { path: 'alunos/ginasio/:id', component: EcraAlunosComponent },
   { path: 'aluno/agendarAvaliacao', component: AgendarAvaliacaoComponentComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'admin/gerirMarcas', component: GerirMarcasComponent },

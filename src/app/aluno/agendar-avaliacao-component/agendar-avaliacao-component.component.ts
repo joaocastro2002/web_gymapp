@@ -18,8 +18,9 @@ export class AgendarAvaliacaoComponentComponent implements OnInit {
 
   mySelect = '2';
   selectedValue: any;
-  // caso tenha mobilidade recebo um array de nomes
+  // caso tenha mobilidade recebo um array de nomes do tipo Interface - vou buscar as declarações - declarado no service
   nome: INomesGinasios[] = [];
+  // agendaForm é do tipo FormGroup
   agendaForm: FormGroup;
 
   constructor(
@@ -32,15 +33,17 @@ export class AgendarAvaliacaoComponentComponent implements OnInit {
     private token: TokenStorageService,
     private router: Router) { }
   
-  // ao iniciar
+  // local onde o código vai ser guardado logo que a classe/component é executada
   ngOnInit(): void {
     this.headerService.setTitle('Agendar Avaliação')
 
+    // para declarar as variáveis do Forms
     this.agendaForm = new FormGroup({
       'ginasioId': new FormControl(null, Validators.required),
       'dataAgendamento': new FormControl(null, Validators.required)
     })
 
+    // função que vai buscar os dados 
     this.getData()
   }
 
@@ -62,9 +65,10 @@ export class AgendarAvaliacaoComponentComponent implements OnInit {
         
       },
       error: error => {
-
+        // se o erro for de 401 - erro no token
         if (error.status == 401) {
-
+          // vamos esperar receber dados da função getNewToken
+          // se chegar os dados vai guardar o token e executar senão vai mandar para o login de novo
           this.sessionManager.getNewToken().subscribe({
             next: data => {
               this.token.saveToken(data.token)
@@ -82,6 +86,7 @@ export class AgendarAvaliacaoComponentComponent implements OnInit {
     })
   }
 
+  // para mudar os valores que estão selecionados na BD
   selectChange() {
     // para mudar os valores no dropdown para a caixa de texto ao selecionar numa data
     this.selectedValue = this.dropdownGinasiosService.getDropDownText(this.selectedValue, this.nome)[0].valor;
@@ -95,6 +100,8 @@ export class AgendarAvaliacaoComponentComponent implements OnInit {
   error: boolean = false;
   errorMsg: string;
 
+  // quando submetermos o formulário se der certo mostra uma mensagem de sucesso senão de erro
+  // na linha 106 vai levar para o Service que faz o post, vai ficar à espera da resposta e depois mediante essa resposta vai mostrar algo
   onSubmit(mySelect): void {
     // chamar a funcao agenda do meu servico (o subscribe espera pela resposta da funcao agenda)
     this.agendarAvaliacaoService.agenda(this.agendaForm.value).subscribe({

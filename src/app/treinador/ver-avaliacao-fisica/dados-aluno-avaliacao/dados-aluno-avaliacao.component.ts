@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DadosAlunoAvaliacaoComponent implements OnInit {
 
+  // listas onde vamos guardar valores dos alunos
   dadosAvaliacao1=[]
   dadosAvaliacao2=[]
 
