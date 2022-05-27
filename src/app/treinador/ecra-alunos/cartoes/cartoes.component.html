@@ -1,7 +1,7 @@
 <div class="col-md-3 col-sm-3 col-xs-4 alunos" *ngFor="let aluno of alunos" style="float:left">
     <div class="card-interior">
         <div class="foto">
-            <img src="aluno.png" class="img-responsive">
+            <img src="../../../../assets/img/aluno.png" class="img-responsive">
             <div class="textos">
                 <li class="nome"><a>{{aluno.nome}}</a></li>
                 <p class="data">Inscrito desde 20-05-2020</p>
@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="buttons">
-            <button routerLinkActive="active" routerLink="/perfil/:id" class="btn">Perfil</button> <!--falta saber qual é o id do aluno-->
+            <button routerLinkActive="active" routerLink="/perfil/{{aluno.uid}}" class="btn">Perfil</button> <!--falta saber qual é o id do aluno-->
             <button routerLinkActive="active" routerLink="/treinador/criarAvaliacao" class="btn">Avaliação fisica</button>
             <button routerLinkActive="active" routerLink="/" class="btn">Plano de treino</button> <!--Criar plano de treino-->
         </div>

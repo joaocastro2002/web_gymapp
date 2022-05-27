@@ -49,7 +49,7 @@ export class VerAlunosService {
 
       let ginasioId = "531316a4-b454-42ec-bc01-7358a8c3bc48";
 
-      return this.http.get<Array<IAlunos>>(`${api_url}alunos/ginasio/ginasioId`, { headers: headers })
+      return this.http.get<Array<IAlunos>>(`${api_url}alunos/ginasio/${ginasioId}`, { headers: headers })
     }
   }
 }
