@@ -20,7 +20,7 @@ export class CartoesComponent implements OnInit {
     private router: Router){}
 
   ngOnInit(): void {
-     this.alunos = [
+     /*this.alunos = [
     {nome: 'André Silva', hashtag: '#ts0202'},
     {nome: 'Lara Martins', hashtag: '#ts0202'},
     {nome: 'João Silva', hashtag: '#ts0202'},
@@ -39,14 +39,14 @@ export class CartoesComponent implements OnInit {
     {nome: 'João Costa', hashtag: '#ts0202'},
     {nome: 'Ana Matos', hashtag: '#ts0202'},
     {nome: 'Rui Paiva', hashtag: '#ts0202'},
-    {nome: 'Isa Santos', hashtag: '#ts0202'}]
-    //this.getAlunos()
+    {nome: 'Isa Santos', hashtag: '#ts0202'}]*/
+    this.getAlunos()
   }
 
   getAlunos(){
     this.verAlunosService.getAlunos().subscribe({
     next: data => {
-
+      console.log(data)
       this.alunos = data
 
     },
