@@ -1,17 +1,18 @@
 <h5 class="title" style="margin-top: 0px; margin-bottom: 0px;">2ª Data Selecionada</h5>
-<div class="card cartao">
+<div class="card cartao" *ngIf="dados.length > 0">
     <div class="card-body fora">
         <div class="row linha-interior" style="margin: 0px">
-            <div class="col-auto" *ngFor="let dado of dados">
-                <div class="card">
-                    <div class="card-body dentro">
-                        <h6 class="title">{{dado.nome}}</h6>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <img src="../../../../assets/img/weight-scale.png" height="60" id="imagem">
-                            </div>
-                            <div class="col-sm-9">
-                                <p>{{dado.valor}}</p>
+                <div class="col-auto" *ngFor="let dado of dados">
+                    <div class="card">
+                        <div class="card-body dentro">
+                            <h6 class="title">{{dado.nome}}</h6>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <img src={{dado.imagem}} height="60" id="imagem">
+                                </div>
+                                <div class="col-sm-9">
+                                    <p>{{dado.valor}}{{dado.unidade}}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -19,4 +20,3 @@
             </div>
         </div>
     </div>
-</div>

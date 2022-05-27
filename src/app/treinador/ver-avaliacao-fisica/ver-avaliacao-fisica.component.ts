@@ -11,6 +11,7 @@ export class VerAvaliacaoFisicaComponent implements OnInit {
   constructor(private headerService: HeaderService) { }
 
   ngOnInit(): void {
+    // vamos meter um titulo no topo da página
     this.headerService.setTitle('Avaliação Física')
   }
 }

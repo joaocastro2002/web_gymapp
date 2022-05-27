@@ -4,11 +4,12 @@
     <div class="row row1">
         <div class="col-auto col1">
             <!-- vou ter um form para ir buscar as datas e ao carregar no onSubmit vou chamar um get para ir buscar os dados -->
-            <form [formGroup]="avaliacaoForm" (ngSubmit)="onSubmit(mySelect)">
+            <form [formGroup]="avaliacaoForm" (ngSubmit)="onSubmit(mySelect, mySelect2)">
                 <h5 style="margin-left: 80px;">1ªData de avaliação:</h5>
             <div class="row drop">
                     <!-- no dropdown vou buscar as datas ao array - a cada data vai estar associado um id - vai ser preciso para ir buscar os restantes dados -->
                     <select name="my-select" class="drop" [(ngModel)]="mySelect" formControlName="avaliacao_id_0">
+                        <!-- para cada data vamos buscar o id para poder fazer o pedido do POST ao submeter -->
                         <option *ngFor="let item of datasAval" [ngValue]="item.avaliacao_id">
                             {{item.data}}
                         </option>
@@ -16,7 +17,7 @@
             </div>
             <h5 style="margin-top: 20px; margin-left: 80px;">2ªData de avaliação:</h5>
             <div class="row drop">
-                    <select name="my-select" class="drop" [(ngModel)]="mySelect" formControlName="avaliacao_id_1">
+                    <select name="my-select2" class="drop" [(ngModel)]="mySelect2" formControlName="avaliacao_id_1">
                         <option *ngFor="let item of datasAval" [ngValue]="item.avaliacao_id">
                             {{item.data}}
                         </option>
@@ -31,14 +32,14 @@
             <app-medidas-comparar-avaliacao [avaliacao]="avaliacao0"></app-medidas-comparar-avaliacao>
         </div>
         <div class="col-auto medidas">
-            <app-medidas-comparar-avaliacao2></app-medidas-comparar-avaliacao2>
+            <app-medidas-comparar-avaliacao2 [avaliacao]="avaliacao1"></app-medidas-comparar-avaliacao2>
         </div>
     </div>
     <div class="row row2">
-        <app-dados-comparar-avaliacao></app-dados-comparar-avaliacao>
+        <app-dados-comparar-avaliacao [avaliacao]="avaliacao0"></app-dados-comparar-avaliacao>
     </div>
     <div class="row row2">
-        <app-dados-comparar-avaliacao2></app-dados-comparar-avaliacao2>
+        <app-dados-comparar-avaliacao2 [avaliacao]="avaliacao1"></app-dados-comparar-avaliacao2>
     </div>
 </div>
 <footer>
