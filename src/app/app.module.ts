@@ -68,13 +68,11 @@ import { GerirMarcasComponent } from './admin/gerir-marcas/gerir-marcas.componen
 import { BotaoAdicionarMarcaComponent } from './admin/gerir-marcas/botao-adicionar-marca/botao-adicionar-marca.component';
 import { FiltrarMarcasComponent } from './admin/gerir-marcas/filtrar-marcas/filtrar-marcas.component';
 import { CardMarcasComponent } from './admin/gerir-marcas/card-marcas/card-marcas.component';
-import { ModalAdicionarMarcaComponent } from './admin/gerir-marcas/modal-adicionar-marca/modal-adicionar-marca.component';
 import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
 import { PostComponent } from './post/post.component';
+import { ModalAdicionarMarcaComponent } from './admin/gerir-marcas/modal-adicionar-marca/modal-adicionar-marca.component';
 
 registerLocaleData(ptPT)
-
-import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-component/agendar-avaliacao-component.component';
 
 @NgModule({
   declarations: [
@@ -137,8 +135,8 @@ import { AgendarAvaliacaoComponentComponent } from './aluno/agendar-avaliacao-co
     BotaoAdicionarMarcaComponent,
     FiltrarMarcasComponent,
     CardMarcasComponent,
-    ModalAdicionarMarcaComponent,
-    AgendarAvaliacaoComponentComponent
+    AgendarAvaliacaoComponentComponent,
+    ModalAdicionarMarcaComponent
   ],
   imports: [
     BrowserModule,
