@@ -2,16 +2,19 @@
     <div class="card-body">
         <div class="container">
             <h5 class="title medidas1">Medidas 1ª Data</h5>
-            <div class="scroll col flex-nowrap">  
-                <div class="row row-interior" *ngFor="let medida of medidas">
-                    <div class="col-sm-7 col221">
-                        <h6 class="title">{{medida.locais_medidas.descricao}}</h6>
-                    </div>
-                    <div class="col-auto col222">
-                        <p>{{medida.medida}}{{medida.unidade_medida}}</p>
-                    </div>
-                    <hr/>
-                </div>   
+            <div class="scroll col flex-nowrap">
+                <!-- sew for vazio não faz nada - não dá erros -->
+                <div *ngIf="medidas.length>0">
+                    <div class="row row-interior" *ngFor="let medida of medidas">
+                        <div class="col-sm-7 col221">
+                            <h6 class="title">{{medida.locais_medidas.descricao}}</h6>
+                        </div>
+                        <div class="col-auto col222">
+                            <p>{{medida.medida}}{{medida.unidade_medida}}</p>
+                        </div>
+                        <hr/>
+                    </div> 
+                </div>  
             </div>         
         </div> 
     </div>

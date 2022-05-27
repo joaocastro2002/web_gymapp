@@ -15,6 +15,7 @@ export interface ICompararAvaliacaoService {
   peso: number,
   musculo: number,
   gordura_corporal: number,
+  gordura_visceral: number,
   agua: number,
   proteina: number,
   massa_ossea: number,
@@ -42,6 +43,7 @@ export interface ICompararAvaliacaoService {
 })
 export class CompararAvaliacaoService {
 
+  //importamos o token storageservice para mantermos a verificação do token
   constructor(
     private http: HttpClient,
     private token: TokenStorageService,
@@ -49,11 +51,19 @@ export class CompararAvaliacaoService {
     private router: Router
   ) { }
   
+  // o objeto observable vai receber os dados do array ou da interface
   // vamos fazer um pedido à API para ir buscar os dados todos indicados na interface em cima
   getDadosAvaliacao(avaliacao_id: string): Observable<ICompararAvaliacaoService> {
+    // vamos obter o token que esta guardado no momento
     const token = this.token.getToken()
+
+    // se nao existir token
+    // vamos geraer um  novo token
     if (token == null) {
+      // vamos ao session manager e pedimos um token novo
       this.sessionManager.getNewToken().subscribe({
+        // se o pedido nao retornar erro, guardamos o token novo
+        // e voltamos a executar a função(return this.getDadosAvaliacao())
         next: data => {
           this.token.saveToken(data.token)
 
