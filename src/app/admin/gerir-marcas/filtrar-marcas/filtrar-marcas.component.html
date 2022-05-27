@@ -23,10 +23,11 @@
     <div class="col-3">
       <div class="dropdown">
         <button class="form-control shadow-none dropdown-toggle" type="button" id="dropdownFiltro"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          Todos
+          data-bs-toggle="dropdown" aria-expanded="false" [style.font-size.px]='12'>
+          {{filtro}}
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownFiltro">
+        <ul (click)="selecionarFiltro($event)" class="dropdown-menu" aria-labelledby="dropdownFiltro">
+          <li><a class="dropdown-item">Todos</a></li>
           <li><a class="dropdown-item">Nome Ascendente</a></li>
           <li><a class="dropdown-item">Nome Descendente</a></li>
           <li><a class="dropdown-item">C/ Mobilidade</a></li>

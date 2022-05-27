@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Marca } from './marca';
+import { IMarca } from './marca';
 
 @Component({
   selector: 'app-card-marcas',
@@ -11,9 +11,22 @@ export class CardMarcasComponent implements OnInit {
   constructor() { 
   }
 
-  @Input() marcas?: Marca[];
+  @Input() marca?: IMarca;
+  @Input() index?: number;
 
   ngOnInit(): void {
+  }
+
+  verGinasios(id_marca: string) {
+    console.log(id_marca)
+  }
+
+  verTreinadores(id_marca: string) {
+    console.log(id_marca)
+  }
+
+  verPublicacoes(id_marca: string) {
+    console.log(id_marca)
   }
 
 }

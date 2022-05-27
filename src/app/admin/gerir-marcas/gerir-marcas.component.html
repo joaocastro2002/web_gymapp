@@ -2,26 +2,58 @@
 <div class="mainPage">
     <div class="row">
         <div class="adicionar-marca col">
-            <app-botao-adicionar-marca></app-botao-adicionar-marca>
+            <app-botao-adicionar-marca (eAdicionarMarca)="abrirAdicionarMarca()"></app-botao-adicionar-marca>
         </div>
         <div class="filtrar-marca col">
-            <app-filtrar-marcas></app-filtrar-marcas>
+            <app-filtrar-marcas (eFiltroSelecionado)="alterarFiltro($event)" [filtro]="filtro"></app-filtrar-marcas>
         </div>
     </div>
-    <div class="album py-5">
-        <div class="container">
-            <app-card-marcas [marcas]="marcas"></app-card-marcas>
-            <!-- <div class="card">
-                <div class="card-body col-auto scroll flex-nowrap">
-                    <div class="card-body">
-                        <div class="col-auto">
-                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                <app-card-marcas *ngFor="let m of marcas" [marca]="m"></app-card-marcas>
-                            </div>
+    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Criar Marca</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="itens row col">
+                        <label class="item1 col-4" for="nome">Nome da marca</label>
+                        <input class="item2 col-5" type="text" id="nome" name="nome" value="F&M Studio">
+                    </div>
+                    <div class="itens row col">
+                        <label class="item1 col-4" for="cor">Cor da marca</label>
+                        <input class="item2 col-5" type="color" id="cor" name="cor" value="#008000" >
+                    </div>
+                    <div class="itens row col">
+                        <label class="item1 col-4" for="mobilidade">Mobilidade</label>
+                        <div class="item2 col-5">
+                            <input type="checkbox" id="mobilidade" name="mobilidade"/>
                         </div>
                     </div>
+                    <div>
+                        <div style="width: 100px; height: 100px; border: 1px solid black; border-radius: 50%;">
+                            <img class="imagem-logo" id="novoLogo" src="https://iconape.com/wp-content/files/ys/367413/png/367413.png">
+                        </div>
+                        <input id="inputNovoLogo" type="file" name="image" accept="image/*" onchange="lerImagem(event, 'novoLogo')">
+                    </div>
                 </div>
-            </div> -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" 
+                            (click)="cancelarMarca()">
+                    Cancelar
+                    </button>
+                    <button type="button" class="btn btn-danger" 
+                            (click)="guardarMarca()">
+                    Guardar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="album py-5 box">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+                <app-card-marcas *ngFor="let marca of marcasInfo; let i = index" [marca]="marca" [index]="index"></app-card-marcas>
+            </div>
         </div>
     </div>
 </div>

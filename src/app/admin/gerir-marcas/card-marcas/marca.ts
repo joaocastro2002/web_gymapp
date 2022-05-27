@@ -1,7 +1,7 @@
-export interface Marca {
-    id: string;
+export interface IMarca {
+    marca_id: string;
     nome: string;
-    mobilidade: boolean;
     cor: string;
-    logo: string;
+    logotipo: string;
+    mobilidade: boolean;
   }
