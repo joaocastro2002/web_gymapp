@@ -8,6 +8,7 @@
                 <h5 style="margin-left: 80px;">1ªData de avaliação:</h5>
             <div class="row drop">
                     <!-- no dropdown vou buscar as datas ao array - a cada data vai estar associado um id - vai ser preciso para ir buscar os restantes dados -->
+                    <!-- mySelect é para ir buscar o que selecionei para mandar para o submit e mandar para a função para ir fazer o get -->
                     <select name="my-select" class="drop" [(ngModel)]="mySelect" formControlName="avaliacao_id_0">
                         <!-- para cada data vamos buscar o id para poder fazer o pedido do POST ao submeter -->
                         <option *ngFor="let item of datasAval" [ngValue]="item.avaliacao_id">

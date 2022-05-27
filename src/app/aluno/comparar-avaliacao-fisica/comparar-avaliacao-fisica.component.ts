@@ -49,6 +49,7 @@ export class CompararAvaliacaoFisicaComponent implements OnInit {
 
     // dizer quais são is inputs do formulário
     this.avaliacaoForm = new FormGroup({
+      // form control vamos buscar à classe para ficarem todos arredondados - fica já com o css
       'avaliacao_id_0': new FormControl(null, Validators.required),
       'avaliacao_id_1': new FormControl(null, Validators.required),
       'data': new FormControl(null, Validators.required)

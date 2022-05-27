@@ -1,9 +1,12 @@
 <app-header></app-header>
 
 <div class="main">
+    <!-- agenda form é o nome do Form - no component declaramos o agendaForm como um Form -->
     <form [formGroup]="agendaForm" (ngSubmit)="onSubmit(mySelect)">
         <div class="row">
+            <!-- através do formControlName vamos buscar o nome do input dentro do formulário -->
             <select name="my-select" class="drop" formControlName="ginasioId">
+                <!-- iterar pela lista para ir buscar o nome do ginásio e através do ngValue vamos buscar o id do ginasio associado ao nome para fazer o pedido à API -->
                 <option *ngFor="let item of nome" [ngValue]="item.ginasio_id">
                     {{item.nome}}
                 </option>
@@ -12,12 +15,18 @@
         <div class="row">
             <input type="datetime-local" class="form-control" id="dataAgendamento" placeholder="Data do agendamento" formControlName="dataAgendamento" name="dataAgendamento">
         </div>
-        <!-- para mostrar uma mensagem em caso de sucesso ou erro -->
+        <!-- para mostrar uma mensagem em caso de sucesso ou erro - se tiver mensagem -->
         <div class="row alerta"  *ngIf="showMsg">
             <div class="col-xs-12">
+             <!-- vamos ter dois tipos - se a classe alerta estiver a true, o error vai ficar a true senão fica a true - importante para o component -->
+             <!-- tenho uma classe em que o alerta está sempre a true -->
+             <!-- só dá erro se o error estiver a true e manda a mensagem de erro e se estiver a false é de sucesso -->
+             <!-- ngClass adiciona e remove CSS porque se tiver sucesso mete sucesso senão mete erro -->
               <p class="alert alert-success" [ngClass]="{'alert':true,
               'alert-danger':error == true, 'alert-success': error == false}">
+                  <!-- se houver erro vamos mostrar a mensagem que deu erro - ir buscar à base de dados -->
                   <strong *ngIf="error; else success">{{errorMsg}}</strong>
+                  <!-- se der sucesso vamos mostrar a mensagem de sucesso -->
                   <ng-template #success><strong>Pedido de Agendamento realizado com sucesso!</strong></ng-template>
               </p>
             </div>

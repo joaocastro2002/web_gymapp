@@ -51,12 +51,12 @@ export class AgendarAvaliacaoComponentComponent implements OnInit {
     // this.selectedValue = this.dropCompararService.getDropDownText(this.selectedValue, this.datas)[0].valor;
     this.dropGinasiosService.getNomeGinasio().subscribe({
       next:data => {
-
+        // se houver mobilidade recebemos um array porque o aluno está registado na marca e recebemos vários arrays
         if(data instanceof Array){
           this.nome = data  
         }
         else{
-          // estamos a meter o objeto dentro do array (tipo o "append")
+          // estamos a meter o objeto dentro do array (tipo o "append") para ser possível
           this.nome.push(data)
         }
 
@@ -67,7 +67,7 @@ export class AgendarAvaliacaoComponentComponent implements OnInit {
       error: error => {
         // se o erro for de 401 - erro no token
         if (error.status == 401) {
-          // vamos esperar receber dados da função getNewToken
+          // vamos esperar receber dados da função getNewToken - pedir um novo Token
           // se chegar os dados vai guardar o token e executar senão vai mandar para o login de novo
           this.sessionManager.getNewToken().subscribe({
             next: data => {
@@ -88,7 +88,8 @@ export class AgendarAvaliacaoComponentComponent implements OnInit {
 
   // para mudar os valores que estão selecionados na BD
   selectChange() {
-    // para mudar os valores no dropdown para a caixa de texto ao selecionar numa data
+    // para mudar os valores no dropdown para a caixa de texto ao selecionar numa data - recebemos um array mas com apenas um elemento que tem o id do que selecionei [0]
+    // o id é o selectedValue e o objeto é o nome - temos de ver se o id corresponde ao nome
     this.selectedValue = this.dropdownGinasiosService.getDropDownText(this.selectedValue, this.nome)[0].valor;
   }
 
